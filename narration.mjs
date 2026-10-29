@@ -88,3 +88,16 @@ export async function joinVideoClips({clips, durations, signal}) {
     return await readFile(output);
   } finally {await rm(directory, {recursive: true, force: true});}
 }
+
+export async function extractLastFrame({video,signal}){
+  const tempRoot=path.resolve(os.tmpdir());
+  const directory=await mkdtemp(path.join(tempRoot,'dongho-frame-'));
+  if(path.dirname(path.resolve(directory))!==tempRoot||!path.basename(directory).startsWith('dongho-frame-'))throw unavailable();
+  try{
+    await writeFile(path.join(directory,'input.mp4'),video);
+    await helper([],{mode:'last-frame',directory},signal);
+    const bytes=await readFile(path.join(directory,'frame.png'));
+    if(bytes.length>8*1024*1024)throw unavailable();
+    return 'data:image/png;base64,'+bytes.toString('base64');
+  }finally{await rm(directory,{recursive:true,force:true});}
+}

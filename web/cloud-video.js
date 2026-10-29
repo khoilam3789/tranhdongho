@@ -5,6 +5,7 @@ async function payload(response){const data=await response.json();if(!response.o
 window.donghoCloudGenerate=async({story,options,reference,signal,onProgress})=>{
   const durations=[];for(let remaining=options.duration||5;remaining>0;remaining-=10)durations.push(Math.min(10,remaining));
   let ffmpeg;
+  let currentFrame=reference.referenceImage;
   const clips=[];
   try{
     if(durations.length>1){
@@ -16,7 +17,7 @@ window.donghoCloudGenerate=async({story,options,reference,signal,onProgress})=>{
     for(let index=0;index<durations.length;index++){
       signal.throwIfAborted();
       onProgress(`Đang gửi đoạn ${index+1}/${durations.length} · ${durations[index]} giây. Mỗi đoạn dùng quota riêng.`);
-      const job=await payload(await fetch('/api/video/jobs',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...story,...options,...reference,duration:durations[index],segmentIndex:index+1,segmentTotal:durations.length}),signal}));
+      const job=await payload(await fetch('/api/video/jobs',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...story,...options,...reference,referenceImage:currentFrame,duration:durations[index],segmentIndex:index+1,segmentTotal:durations.length}),signal}));
       let finished=false;
       const deadline=Date.now()+20*60*1000;
       while(Date.now()<deadline){
@@ -32,10 +33,20 @@ window.donghoCloudGenerate=async({story,options,reference,signal,onProgress})=>{
       const bytes=new Uint8Array(await response.arrayBuffer());
       if(bytes.length<12||String.fromCharCode(...bytes.slice(4,8))!=='ftyp')throw new Error('Một đoạn chưa phải MP4 hợp lệ. Không tự tạo lại.');
       clips.push(bytes);
+      if(ffmpeg){
+        await ffmpeg.writeFile(`clip-${index}.mp4`,bytes);
+        if(index<durations.length-1){
+          onProgress(`Đang lấy khung cuối đoạn ${index+1} để nối tiếp đoạn ${index+2}…`);
+          const exit=await ffmpeg.exec(['-sseof','-0.5','-i',`clip-${index}.mp4`,'-an','-update','1','-vsync','0','-y','continuation.png']);
+          if(exit!==0)throw new Error('Chưa lấy được khung hình nối cảnh; đã dừng, không tạo đoạn tiếp theo.');
+          const frame=await ffmpeg.readFile('continuation.png');
+          currentFrame=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(new Error('Chưa đọc được ảnh nối cảnh.'));reader.readAsDataURL(new Blob([frame],{type:'image/png'}));});
+          signal.throwIfAborted();
+        }
+      }
     }
     if(!ffmpeg)return new Blob(clips,{type:'video/mp4'});
     onProgress('Đang ghép các đoạn ngay trong trình duyệt. Không gọi thêm AI.');
-    for(let index=0;index<clips.length;index++)await ffmpeg.writeFile(`clip-${index}.mp4`,clips[index]);
     await ffmpeg.writeFile('clips.txt',new TextEncoder().encode(clips.map((_,index)=>`file 'clip-${index}.mp4'`).join('\n')));
     const args=['-f','concat','-safe','1','-i','clips.txt','-an','-c:v','copy','-t',String(options.duration),'-movflags','+faststart','result.mp4'];
     const abort=()=>ffmpeg.terminate();signal.addEventListener('abort',abort,{once:true});

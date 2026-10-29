@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {generateBytePlusVideo, planBytePlusDuration, BYTEPLUS_MODELS} from '../byteplus-video.mjs';
 const mp4 = Buffer.concat([Buffer.from([0,0,0,24]), Buffer.from('ftypisom'), Buffer.alloc(16)]);
 const options = () => ({story: {model: BYTEPLUS_MODELS[0], duration: 30, aspectRatio: '16:9', referenceImage: 'data:image/png;base64,reference'}, prompt: 'Complete story', apiKey: 'private-test-key', pollIntervalMs: 0,
-  compositionReadyImpl: async () => ({available: true}), downloadImpl: async () => new Response(mp4)});
+  compositionReadyImpl: async () => ({available: true}), continuationImpl: async () => 'data:image/png;base64,continued-frame', downloadImpl: async () => new Response(mp4)});
 
 test('long durations have bounded plans that never send an unsupported 30-second provider task', () => {
   for (const [total, plan] of [[5,[5]],[10,[10]],[15,[10,5]],[20,[10,10]],[25,[10,10,5]],[30,[10,10,10]]]) assert.deepEqual(planBytePlusDuration(total), plan);
@@ -22,7 +22,7 @@ test('30 seconds submits exactly three 10-second jobs, preserves segment order a
   assert.equal(result.status,200);
   assert.equal(submissions.length,3);
   assert.equal(joins,1);
-  submissions.forEach((body,index) => {assert.equal(body.duration,10); assert.match(body.content[0].text,new RegExp('segment '+(index+1)+' of 3')); assert.equal(body.model,BYTEPLUS_MODELS[0].id);assert.equal(body.content[1].role,'first_frame');assert.equal(body.content[1].image_url.url,options().story.referenceImage);});
+  submissions.forEach((body,index) => {assert.equal(body.duration,10); assert.match(body.content[0].text,new RegExp('segment '+(index+1)+' of 3')); assert.equal(body.model,BYTEPLUS_MODELS[0].id);assert.equal(body.content[1].role,'first_frame');assert.equal(body.content[1].image_url.url,index===0?options().story.referenceImage:'data:image/png;base64,continued-frame');});
 });
 test('missing local composer blocks all paid video submissions', async () => {
   let calls=0;

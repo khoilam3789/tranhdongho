@@ -24,6 +24,15 @@ def main():
         print(json.dumps({'available': True}))
         return
     data = json.load(sys.stdin)
+    if data.get('mode') == 'last-frame':
+        folder = Path(data['directory']).resolve()
+        result = run([ffmpeg, '-nostdin', '-hide_banner', '-loglevel', 'error', '-y',
+                      '-protocol_whitelist', 'file,pipe', '-sseof', '-0.5', '-i', str(folder / 'input.mp4'),
+                      '-an', '-update', '1', '-vsync', '0', str(folder / 'frame.png')], 30)
+        if result.returncode or not (folder / 'frame.png').is_file():
+            raise RuntimeError('frame_failed')
+        print(json.dumps({'available': True}))
+        return
     if data.get('mode') == 'join':
         folder = Path(data['directory']).resolve()
         durations = data['durations']

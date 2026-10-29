@@ -59,7 +59,7 @@ export function createCloudHandler({env=process.env,fetchImpl=fetch,downloadImpl
         if(!story.referenceImage) throw new CloudError(400,'Chưa có ảnh tranh gốc.');
         const part=Number(body.segmentIndex)||1,total=Number(body.segmentTotal)||1;
         if(!Number.isInteger(part)||!Number.isInteger(total)||part<1||part>total||total>3) throw new CloudError(400,'Số đoạn chưa hợp lệ.');
-        const prompt=buildVideoPrompt(story)+`\nSegment ${part} of ${total}. Preserve the exact supplied painting in every segment, with only minimal existing-element motion. Do not invent a new scene.`;
+        const prompt=buildVideoPrompt(story)+`\nSegment ${part} of ${total}. ${part>1?'The supplied first frame is the FINAL FRAME OF THE PREVIOUS SEGMENT. Continue directly from this exact frame: no reset, pose jump, camera change, palette change, subject replacement or new scene. Preserve identities, positions, scale, lighting and ongoing motion direction.':'Begin gently from the supplied original painting.'} Preserve the exact printed artwork with only minimal existing-element motion.`;
         const task=await upstream(TASKS,{key,fetchImpl,signal,method:'POST',body:{model:BYTEPLUS_MODELS[0].id,content:[{type:'text',text:prompt},{type:'image_url',image_url:{url:story.referenceImage},role:'first_frame'}],duration:story.duration,resolution:'720p',ratio:story.aspectRatio,watermark:true,service_tier:'default'}});
         if(typeof task.id!=='string'||!/^[\w-]{1,160}$/.test(task.id)) throw new CloudError(502,'BytePlus chưa trả mã tác vụ hợp lệ. Kiểm tra lịch sử trước khi tạo lại.');
         return json({token:sign(task.id,key),status:'queued'},202);

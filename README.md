@@ -134,3 +134,7 @@ Biến môi trường server cần có:
 Bản cloud ẩn giọng đọc. FE tạo từng tác vụ, hỏi trạng thái qua API ngắn và tải MP4 qua phản hồi streaming. Các mức 15–30 giây ghép bằng FFmpeg WebAssembly single-thread trong trình duyệt, tải khoảng 32 MB ở lần đầu. Không cần Python hoặc Railway. Bộ ghép được tải trước khi gửi các tác vụ dài. Máy yếu có thể ghép chậm. API key không được nhúng vào HTML/JS và không đưa `.env` lên GitHub.
 
 Video AI vẫn có thể làm lệch chi tiết so với ảnh đầu, dù prompt giữ tranh và mỗi đoạn đều dùng cùng tranh gốc. API công khai dùng quota tài khoản được cấu hình; quản lý quyền chia sẻ đường dẫn và quota tại Vercel/BytePlus.
+
+### Nối tiếp cảnh trong video dài
+
+Đoạn đầu dùng tranh gốc. Sau mỗi đoạn, FFmpeg lấy khung cuối làm ảnh đầu cho đoạn tiếp theo; prompt yêu cầu tiếp tục đúng vị trí/tư thế và hướng chuyển động, không quay lại khung gốc hoặc đổi góc máy. Cả bản local và cloud dùng cách nối tiếp này. Không lấy được khung nối thì dừng trước khi gửi đoạn kế tiếp, không tự tạo lại. Đây là ràng buộc ảnh/prompt, không bảo đảm AI giữ nguyên tuyệt đối mọi chi tiết giữa các đoạn.

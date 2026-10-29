@@ -1,4 +1,4 @@
-import {joinVideoClips, getNarrationConfig} from './narration.mjs';
+import {joinVideoClips, getNarrationConfig, extractLastFrame} from './narration.mjs';
 // BytePlus ModelArk Singapore. Connection checks only list existing tasks.
 const BASE = 'https://ark.ap-southeast.bytepluses.com/api/v3';
 const TASKS = `${BASE}/contents/generations/tasks`;
@@ -94,18 +94,19 @@ export function planBytePlusDuration(duration = 5) {
 }
 
 export async function generateBytePlusVideo(options) {
-  const {story, prompt, signal, composeImpl = joinVideoClips, compositionReadyImpl = getNarrationConfig} = options;
+  const {story, prompt, signal, composeImpl = joinVideoClips, compositionReadyImpl = getNarrationConfig, continuationImpl = extractLastFrame} = options;
   const plan = planBytePlusDuration(story.duration || 5);
   if (plan.length === 1) return generateBytePlusClip(options);
   // Verify the local composer BEFORE using any video quota.
   if (!(await compositionReadyImpl()).available) throw new BytePlusError(503, 'Bộ ghép video trên máy chưa sẵn sàng. Chưa gửi tác vụ BytePlus; hãy cài bộ FFmpeg trước khi tạo video dài.');
   const clips = [];
+  let currentFrame=story.referenceImage;
   let totalBytes = 0;
   for (let index = 0; index < plan.length; index++) {
     signal?.throwIfAborted();
-    const segmentPrompt = `${prompt}\nThis is segment ${index + 1} of ${plan.length} in one ${story.duration}-second story, suggesting the ${index === 0 ? 'opening' : index === plan.length - 1 ? 'ending' : 'middle development'} only through subtle motion. Preserve the exact supplied source painting in every segment; do not invent new scenes. Keep the same figures, composition, palette and print style. This segment lasts ${plan[index]} seconds.`;
+    const segmentPrompt = `${prompt}\nThis is segment ${index + 1} of ${plan.length} in one ${story.duration}-second story, suggesting the ${index === 0 ? 'opening' : index === plan.length - 1 ? 'ending' : 'middle development'} only through subtle motion. ${index>0?'The supplied image is the final frame of the previous segment: continue directly from it with no pose reset, jump, camera change or change of motion direction.':''} Preserve the exact printed artwork; do not invent new scenes. Keep the same figures, composition, palette and print style. This segment lasts ${plan[index]} seconds.`;
     let response;
-    try {response = await generateBytePlusClip({...options, story: {...story, duration: plan[index]}, prompt: segmentPrompt});}
+    try {response = await generateBytePlusClip({...options, story: {...story, referenceImage:currentFrame, duration: plan[index]}, prompt: segmentPrompt});}
     catch (error) {
       if (index && error instanceof BytePlusError) throw new BytePlusError(error.status, `${error.message} Đã hoàn tất ${index}/${plan.length} đoạn; các đoạn đã tạo có thể đã dùng quota. Không tự tạo lại.`);
       throw error;
@@ -121,6 +122,10 @@ export async function generateBytePlusVideo(options) {
     const clip = Buffer.concat(parts);
     if (clip.length < 12 || clip.toString('ascii', 4, 8) !== 'ftyp') throw new BytePlusError(502, 'Một đoạn chưa phải MP4 hợp lệ. Không tự tạo lại tác vụ.');
     clips.push(clip);
+    if(currentFrame&&index<plan.length-1){
+      try{currentFrame=await continuationImpl({video:clip,signal});}
+      catch{signal?.throwIfAborted();throw new BytePlusError(502,`Đã tạo ${index+1}/${plan.length} đoạn nhưng chưa lấy được khung nối cảnh. Đã dừng; không tự tạo đoạn tiếp theo hoặc gửi lại tác vụ.`);}
+    }
   }
   try {
     const video = await composeImpl({clips, durations: plan, signal});
