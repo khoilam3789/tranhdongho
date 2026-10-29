@@ -1,0 +1,20 @@
+{
+  "name": "dong-ho-lab",
+  "version": "2.3.0",
+  "private": true,
+  "type": "module",
+  "description": "Local Dong Ho storytelling app with a server-side video API proxy",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node scripts/test-playback.cjs && node --test tests/*.test.mjs",
+    "build": "node scripts/build-vercel.mjs"
+  },
+  "dependencies": {
+    "@ffmpeg/core": "0.12.10",
+    "@ffmpeg/ffmpeg": "0.12.15",
+    "esbuild": "0.28.2"
+  }
+}

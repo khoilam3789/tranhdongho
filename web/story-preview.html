@@ -1,0 +1,8 @@
+<div class="preview-mode-switch" role="tablist" aria-label="Loại video xem trước">
+  <button type="button" id="preview2DTab" role="tab" aria-selected="true" aria-controls="preview2DPanel" tabindex="0">Hoạt ảnh 2D <span>Miễn phí</span></button>
+  <button type="button" id="previewAITab" role="tab" aria-selected="false" aria-controls="previewAIPanel" tabindex="-1">Video AI <span>MP4</span></button>
+</div>
+<div id="previewAIPanel" class="ai-output" role="tabpanel" aria-labelledby="previewAITab" hidden>
+  <div id="aiEmptyState" class="ai-empty"><div class="ai-film-mark" aria-hidden="true">▶</div><strong>Thước phim bắt đầu từ câu chuyện của em</strong><p>Hoàn thiện nội dung, chọn model rồi bấm “Tạo video AI”. Video hoàn tất sẽ xuất hiện tại đây.</p><span class="tag tag-cream">Lấy cảm hứng từ tranh Đông Hồ</span></div>
+  <div id="aiResult" hidden><video id="aiVideoPlayer" controls playsinline preload="metadata" aria-label="Video do AI tạo từ câu chuyện"></video><div class="ai-result-heading"><strong id="aiResultTitle"></strong><span class="tag tag-cream">Sáng tạo bằng AI</span></div><p id="aiResultMeta" class="hint-text"></p><p id="aiStaleNotice" class="ai-stale" hidden>Nội dung đã thay đổi sau lần tạo này. Bấm ghép lời kể để cập nhật giọng đọc; tạo video mới nếu cần đổi hình ảnh.</p><a id="downloadAIVideoBtn" class="button button-primary full-width" download="dong-ho-lab-ai.mp4">Tải video MP4</a><p class="hint-text">Tải video trước khi đóng trang. Video chưa được lưu trong tệp dự án JSON.</p></div>
+</div>
