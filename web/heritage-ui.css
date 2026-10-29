@@ -10,3 +10,5 @@ body{background:#faf2df;font-family:Nunito,'Segoe UI',sans-serif}.shell{display:
 @media(prefers-reduced-motion:reduce){.map-sign{transition:none}}
 
 #downloadTeacherBackground[hidden]{display:none!important}#downloadTeacherBackground{margin-top:10px;text-decoration:none}
+
+#workStage.grid-puzzle .placed-piece[data-key^="pig_tile_"]{border:0;border-radius:0}#workStage.grid-puzzle .placed-piece.selected[data-key^="pig_tile_"]{outline:2px dashed #9b5737;outline-offset:-2px}#workStage.grid-puzzle .stage-corner{display:none}

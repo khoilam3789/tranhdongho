@@ -45,13 +45,17 @@
     if(!overlay){overlay=document.createElement('img');overlay.id='studioReferenceOverlay';overlay.alt='Tranh chuẩn để tự đối chiếu vị trí';$('#workStage').appendChild(overlay);}
     if(painting)overlay.src=app.asset(painting.img);
     overlay.hidden=!referenceVisible||!painting;
+    let puzzle=$('#pigPuzzleControls');
+    if(!puzzle){puzzle=document.createElement('div');puzzle.id='pigPuzzleControls';const button=document.createElement('button');button.type='button';button.className='button button-outline-dark';button.textContent='Bắt đầu ghép 3×3 · Xáo trộn 9 mảnh';button.onclick=()=>app.startGridPuzzle();puzzle.append(button);const status=document.createElement('p');status.id='pigPuzzleStatus';status.setAttribute('aria-live','polite');puzzle.append(status);$('.composition-check').prepend(puzzle);}
+    puzzle.hidden=!kit?.grid;
+    if(kit?.grid){const old=state.placed.some(p=>catalog.pieces.find(b=>b.id===p.key)?.legacyOnly);const correct=state.placed.filter(p=>{const b=catalog.pieces.find(b=>b.id===p.key);return b?.gridTile&&Math.hypot(p.x-b.target.x,p.y-b.target.y)<.01&&p.scale===100&&p.angle===0;}).length;$('#pigPuzzleStatus').textContent=old?'Bố cục đang dùng mảnh cắt cũ. Bấm Bắt đầu ghép 3×3 để đổi sang 9 ô nguyên vẹn; có thể Hoàn tác.':'Đúng vị trí: '+correct+'/9. Kéo thả hoặc dùng phím mũi tên để đổi ô.';}
     let download=$('#downloadTeacherBackground');
     if(!download){download=document.createElement('a');download.id='downloadTeacherBackground';download.className='button button-neutral';download.href='heritage/images/teacher-background-provided.png';download.download='nen-thay-do-coc-co-cay-va-ban.png';download.textContent='Tải nền có cây và bàn';$('.composition-check').appendChild(download);}
     download.hidden=kit?.id!=='teacher';
 
     $('#checkCompositionBtn').setAttribute('aria-pressed',String(referenceVisible));
     $('#checkCompositionBtn').textContent=referenceVisible?'Ẩn hình chuẩn':'Kiểm tra · Hiện hình chuẩn';
-    $('#compositionCheckHint').textContent=referenceVisible?'Hình chuẩn đang hiện mờ. Em vẫn kéo hoặc dùng phím mũi tên để tự căn lại từng mảnh.':'Bật hình chuẩn để đối chiếu; ứng dụng không tự di chuyển các mảnh hoặc chấm điểm bố cục.';
+    $('#compositionCheckHint').textContent=kit?.grid?'Lưới 3×3 giữ cố định kích thước và hướng mảnh để mép ảnh khớp nhau. Bật hình chuẩn khi cần gợi ý.':referenceVisible?'Hình chuẩn đang hiện mờ. Em vẫn kéo hoặc dùng phím mũi tên để tự căn lại từng mảnh.':'Bật hình chuẩn để đối chiếu; ứng dụng không tự di chuyển các mảnh hoặc chấm điểm bố cục.';
   }
   $('#checkCompositionBtn').addEventListener('click',()=>{referenceVisible=!referenceVisible;refreshStudio();});
   let currentPainting=null;

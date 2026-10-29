@@ -37,6 +37,18 @@ for(const [id,kit]of Object.entries(objectMasks)){
   catalog.pieces.push({id:id+'_object_'+index,name:object.name,img:'generated/'+id+'-object-'+index+'.svg',width:w/kit.width*fitX*100,painting:id,desc:'Phần hình tượng nhìn thấy trong tranh gốc, tách bằng mặt nạ SVG, không vẽ bù phần bị che.',target:{x:50+((x+w/2)/kit.width-.5)*fitX*100,y:50+((y+h/2)/kit.height-.5)*fitY*100}});
  });
 }
+// Nine lossless rectangular views of the complete original; retain old IDs for saved projects.
+const pig=catalog.paintings.find(p=>p.id==='pig'),pigStudio=catalog.studios.find(s=>s.id==='pig');
+const W=650,H=433,fitX=Math.min(1,W/H/1.5),fitY=Math.min(1,1.5/(W/H));
+pigStudio.grid={rows:3,cols:3,fitX,fitY};
+for(const piece of catalog.pieces)if(piece.painting==='pig')piece.legacyOnly=true;
+for(let row=0;row<3;row++)for(let col=0;col<3;col++){
+ const index=row*3+col;
+ catalog.pieces.push({id:'pig_tile_'+(index+1),name:'Mảnh '+(index+1),img:'generated/pig-tile-'+index+'.svg',painting:'pig',gridTile:true,width:fitX*100/3,target:{x:50+((col+.5)/3-.5)*fitX*100,y:50+((row+.5)/3-.5)*fitY*100},desc:'Mảnh chữ nhật cắt từ ảnh gốc Lợn đàn. Kéo vào ô để ghép; kéo lên mảnh khác để đổi chỗ.',svgCrop:{source:pig.img,width:W,height:H,x:col*W/3,y:row*H/3,w:W/3,h:H/3}});
+}
+let gridSvg='<svg xmlns="http://www.w3.org/2000/svg" width="650" height="433" viewBox="0 0 650 433"><rect width="650" height="433" fill="#f4e7d1"/><g stroke="#b8a987" stroke-width=".7" fill="none"><rect x=".5" y=".5" width="649" height="432"/>';
+for(let i=1;i<3;i++)gridSvg+='<path d="M '+i*W/3+' 0 V 433 M 0 '+i*H/3+' H 650"/>';
+gridSvg+='</g></svg>';pigStudio.background='generated/pig-grid.svg';pigStudio.structuralBackground=true;embedded[pigStudio.background]='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(gridSvg);
 const scripts=[...html.matchAll(/<script([^>]*)>([\s\S]*?)<\/script>/g)];
 const catalogScript=scripts.find(match=>/^\s*window\.DONGHO_CATALOG\s*=/.test(match[2]));
 if(!catalogScript)throw new Error('Missing catalogue');
@@ -44,7 +56,7 @@ html=html.replace(catalogScript[0],()=>'<script>window.DONGHO_CATALOG = '+JSON.s
 function script(id,source){return `<script id="${id}">${source.replace(/<\/script/gi,'<\\/script')}</script>`;}
 function stripId(id){html=html.replace(new RegExp(`<script id="${id}">[\\s\\S]*?<\\/script>`,'g'),'');}
 stripId('heritage-data');stripId('heritage-core');stripId('heritage-ui');
-const dataScript=script('heritage-data',`window.HERITAGE_REQUIREMENTS=${JSON.stringify(content).replace(/</g,'\\u003c')};Object.assign(window.__ASSETS,${JSON.stringify(embedded)});for(const piece of window.DONGHO_CATALOG.pieces){if(!piece.svgCrop)continue;const b=piece.svgCrop;const svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+b.w+'" height="'+b.h+'" viewBox="'+b.x+' '+b.y+' '+b.w+' '+b.h+'"><image width="'+b.width+'" height="'+b.height+'" href="'+window.__ASSETS[b.source]+'"/></svg>';window.__ASSETS[piece.img]='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);}`);
+const dataScript=script('heritage-data',`window.HERITAGE_REQUIREMENTS=${JSON.stringify(content).replace(/</g,'\\u003c')};Object.assign(window.__ASSETS,${JSON.stringify(embedded)});for(const piece of window.DONGHO_CATALOG.pieces){if(!piece.svgCrop)continue;const b=piece.svgCrop;const svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+(piece.gridTile?b.width:b.w)+'" height="'+(piece.gridTile?b.height:b.h)+'" viewBox="'+b.x+' '+b.y+' '+b.w+' '+b.h+'"><image width="'+b.width+'" height="'+b.height+'" href="'+window.__ASSETS[b.source]+'"/></svg>';window.__ASSETS[piece.img]='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);}`);
 const appScript=scripts.find(match=>match[1].includes('id="dongho-app-script"')||match[2].includes('const paintings=window.DONGHO_CATALOG.paintings;'));
 if(!appScript)throw new Error('Missing main application script');
 const objectBootstrap=script('object-mask-data',maskRuntime+';window.DongHoObjectMasks.populate(window.__ASSETS,'+JSON.stringify(objectMasks)+');');
