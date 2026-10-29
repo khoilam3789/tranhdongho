@@ -16,10 +16,14 @@
   $('.knowledge-level').textContent='4 bài học · Có giọng đọc';
 
   const shortcuts=[['intro','🎬','Lời chào từ làng tranh','Video giới thiệu'],['history','📜','Làng Mái xưa','Lịch sử Đông Hồ'],['materials','🌾','Từ cây thành giấy','Giấy và nguyên liệu'],['colors','🎨','Năm sắc thiên nhiên','Màu sắc truyền thống'],['library','🖼️','Mỗi tranh một chuyện','Khám phá hình tượng'],['games','🧩','Chơi cùng di sản','3 trò chơi tương tác']];
-  $('#view-home').insertAdjacentHTML('afterbegin',`<section class="heritage-welcome" aria-labelledby="heritageWelcomeTitle"><div><span class="eyebrow">MỘT CHẠM · MỘT CÂU CHUYỆN</span><h1 id="heritageWelcomeTitle">Hẹn em ở làng tranh Đông Hồ</h1><p>Nghe chuyện làng, khám phá sắc màu, ghép tranh và kể câu chuyện của riêng em.</p></div><div class="heritage-shortcuts">${shortcuts.map(([id,emoji,title,subtitle],index)=>`<button class="heritage-shortcut shortcut-${index}" type="button" data-heritage-go="${id}"><span class="shortcut-emoji" aria-hidden="true">${emoji}</span><strong>${title}</strong><small>${subtitle}</small></button>`).join('')}</div></section>`);
+
+  const mapLabels={intro:'Video giới thiệu',history:'Lịch sử làng tranh',materials:'Giấy và nguyên liệu',colors:'Năm sắc thiên nhiên',library:'Khám phá tranh',games:'Trò chơi di sản'};
+  $('#view-home').insertAdjacentHTML('afterbegin','<section class="heritage-welcome map-welcome" aria-labelledby="heritageWelcomeTitle"><div class="map-heading"><span class="eyebrow">CÙNG EM VỀ LÀNG TRANH</span><h1 id="heritageWelcomeTitle">Một chuyến chơi Đông Hồ</h1><p>Chạm vào một điểm trên bản đồ để mở câu chuyện, nghe bài học và khám phá nghề tranh.</p></div><div class="heritage-map-scroll" tabindex="0" aria-label="Bản đồ làng tranh, có thể kéo ngang trên màn hình nhỏ"><div class="heritage-map"><img class="village-map-image" src="heritage/images/dongho-village-map-v3.webp" alt="Bản đồ minh họa chibi gồm sáu điểm khám phá làng tranh Đông Hồ"><nav class="map-destinations" aria-label="Sáu điểm khám phá làng tranh">'+shortcuts.map(([id],index)=>'<button class="map-destination destination-'+index+'" type="button" data-heritage-go="'+id+'"><span class="map-sign">'+mapLabels[id]+'</span></button>').join('')+'</nav></div></div><p class="map-pan-hint">Kéo ngang để khám phá bản đồ, hoặc chọn nhanh một mục bên dưới.</p><nav class="map-quick-links" aria-label="Chọn nhanh nội dung">'+shortcuts.map(([id])=>'<button type="button" data-heritage-go="'+id+'">'+mapLabels[id]+'</button>').join('')+'</nav></section>');
+  $('#view-home').setAttribute('aria-labelledby','heritageWelcomeTitle');
+  const projectMenu=document.createElement('details');projectMenu.className='project-menu';projectMenu.innerHTML='<summary>Dự án của em</summary>';projectMenu.appendChild($('.save-box'));$('.sidebar').appendChild(projectMenu);
   document.querySelectorAll('[data-heritage-go]').forEach(button=>button.addEventListener('click',()=>{
     pauseMedia();const target=button.dataset.heritageGo;
-    if(target==='intro'){$('#heritageIntroDialog').showModal();return;}
+    if(target==='intro'){if(!introURL&&data.introVideo){const video=$('#heritageIntroVideo');video.src=data.introVideo.src;video.hidden=false;$('#introVideoStatus').textContent=data.introVideo.caption;}$('#heritageIntroDialog').showModal();return;}
     if(['history','materials','colors'].includes(target)){app.navigate('home');$(`[data-lesson="${target}"]`).click();$(`[data-lesson-panel="${target}"]`).scrollIntoView({behavior:'smooth',block:'start'});}
     else app.navigate(target);
   }));
@@ -62,11 +66,37 @@
     const id=button.dataset.learningGame;for(const [key,panel]of Object.entries(gamePanels))panel.hidden=key!==id;
     document.querySelectorAll('[data-learning-game]').forEach(tab=>{const selected=tab===button;tab.classList.toggle('active',selected);tab.setAttribute('aria-selected',String(selected));});
   }));
+
   function crossword(){
     const rows=data.games.crossword;
-    gamePanels.crossword.innerHTML=`<h2>Giải mã 10 hàng ngang</h2><p>Nhập có dấu hoặc không dấu đều được. Số ô không tính dấu cách.</p><form id="crosswordForm"><div class="crossword-rows">${rows.map((row,index)=>`<label class="crossword-row"><span><strong>${index+1}.</strong> ${escape(row.clue)} <small>(${core.normalizeAnswer(row.answer).length} ô)</small></span><input class="field" name="crossword-${index}" autocomplete="off" aria-label="Hàng ngang ${index+1}"><span id="crossword-feedback-${index}" class="game-row-feedback"></span></label>`).join('')}</div><button class="button button-primary" type="submit">Kiểm tra ô chữ</button><button class="button button-neutral" type="reset">Chơi lại</button></form><p id="crosswordScore" class="game-feedback" role="status" aria-live="polite"></p>`;
-    $('#crosswordForm').addEventListener('submit',event=>{event.preventDefault();let score=0;rows.forEach((row,index)=>{const input=event.currentTarget.elements.namedItem('crossword-'+index),correct=core.normalizeAnswer(input.value)===core.normalizeAnswer(row.answer);score+=Number(correct);input.setAttribute('aria-invalid',String(!correct));$('#crossword-feedback-'+index).textContent=correct?'✓ Đúng':'Chưa đúng, em thử lại nhé.';});$('#crosswordScore').textContent=score===10?'Em đã giải mã đủ 10 hàng ngang!':`Em đã giải đúng ${score}/10 hàng ngang.`;});
-    $('#crosswordForm').addEventListener('reset',()=>{rows.forEach((_,index)=>{$('#crossword-feedback-'+index).textContent='';const input=$('#crosswordForm').elements.namedItem('crossword-'+index);input.removeAttribute('aria-invalid');});$('#crosswordScore').textContent='';});
+    gamePanels.crossword.innerHTML='<h2>Giải mã 10 hàng ngang</h2><p>Mỗi ô điền một chữ cái. Em có thể dán cả đáp án; dấu và khoảng trắng sẽ được bỏ tự động.</p><form id="crosswordForm"><div class="crossword-rows">'+rows.map((row,index)=>'<fieldset class="crossword-word"><legend><b>'+(index+1)+'.</b> '+escape(row.clue)+'</legend><div class="letter-row">'+Array.from(core.normalizeAnswer(row.answer)).map((_,col)=>'<input class="crossword-cell" type="text" data-row="'+index+'" data-col="'+col+'" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Hàng '+(index+1)+', ô '+(col+1)+'">').join('')+'</div><span id="crossword-feedback-'+index+'" class="game-row-feedback" aria-live="polite"></span></fieldset>').join('')+'</div><button class="button button-primary" type="submit">Kiểm tra ô chữ</button><button class="button button-neutral" type="reset">Chơi lại</button></form><p id="crosswordScore" class="game-feedback" role="status" aria-live="polite"></p>';
+    const form=$('#crosswordForm'),cells=row=>Array.from(form.querySelectorAll('[data-row="'+row+'"]'));
+    const distribute=(input,text)=>{
+      const group=cells(input.dataset.row),start=Number(input.dataset.col),letters=Array.from(core.normalizeAnswer(text));
+      input.closest('fieldset').classList.remove('word-correct');group.forEach(cell=>cell.removeAttribute('aria-invalid'));$('#crossword-feedback-'+input.dataset.row).textContent='';$('#crosswordScore').textContent='';
+      if(!letters.length){input.value='';return;}
+      letters.slice(0,group.length-start).forEach((letter,i)=>group[start+i].value=letter);
+      group[Math.min(group.length-1,start+letters.length)].focus();
+    };
+    form.querySelectorAll('.crossword-cell').forEach(input=>{
+      input.addEventListener('input',event=>{if(!event.isComposing)distribute(input,input.value);});
+      input.addEventListener('compositionend',()=>distribute(input,input.value));
+      input.addEventListener('paste',event=>{event.preventDefault();distribute(input,event.clipboardData.getData('text'));});
+      input.addEventListener('keydown',event=>{
+        const group=cells(input.dataset.row),col=Number(input.dataset.col),row=Number(input.dataset.row);
+        if(event.key==='Backspace'&&!input.value&&col>0){event.preventDefault();group[col-1].value='';distribute(group[col-1],'');group[col-1].focus();}
+        if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){
+          event.preventDefault();const target=event.key==='Home'?0:event.key==='End'?group.length-1:Math.max(0,Math.min(group.length-1,col+(event.key==='ArrowLeft'?-1:1)));group[target].focus();
+        }
+        if(event.key==='ArrowDown'||event.key==='ArrowUp'){event.preventDefault();const next=cells(Math.max(0,Math.min(rows.length-1,row+(event.key==='ArrowDown'?1:-1))));next[Math.min(col,next.length-1)].focus();}
+      });
+    });
+    form.addEventListener('submit',event=>{event.preventDefault();let score=0;rows.forEach((row,index)=>{
+      const group=cells(index),correct=group.map(input=>input.value).join('')===core.normalizeAnswer(row.answer);score+=Number(correct);
+      group.forEach(input=>input.setAttribute('aria-invalid',String(!correct)));group[0].closest('fieldset').classList.toggle('word-correct',correct);
+      $('#crossword-feedback-'+index).textContent=correct?'✓ Đúng':'Chưa đúng, em thử lại nhé.';
+    });$('#crosswordScore').textContent=score===rows.length?'Em đã giải mã đủ 10 hàng ngang!':'Em đã giải đúng '+score+'/'+rows.length+' hàng ngang.';});
+    form.addEventListener('reset',()=>{form.querySelectorAll('.crossword-cell').forEach(input=>input.removeAttribute('aria-invalid'));form.querySelectorAll('.word-correct').forEach(row=>row.classList.remove('word-correct'));rows.forEach((_,index)=>$('#crossword-feedback-'+index).textContent='');$('#crosswordScore').textContent='';});
   }
   let guessOrder=[],guessIndex=0,guessScore=0,guessAnswered=false;
   function renderGuess(){

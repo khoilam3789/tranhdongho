@@ -151,3 +151,12 @@ Xưởng ghép có nút bật hình chuẩn mờ để tự đối chiếu. Các
 Ba trò chơi gồm giải 10 hàng ngang, đoán tên 5 tranh và nối 6 cặp thông tin. Bài ôn tập chọn 10 câu từ ngân hàng 37 câu, đảo lựa chọn và chấm đúng theo thứ tự mới; có thể bắt đầu bộ câu hỏi khác. Bài ôn tập chỉ phục vụ tự học.
 
 `node scripts/update-heritage-ui.mjs` nhúng các nguồn `web/app.js`, `web/heritage-*.js`, CSS và học liệu vào HTML. Lệnh build tự cập nhật HTML và sao chép ảnh/MP3 vào `public/heritage/`. Chỉnh giao diện video ở `web/story-ai.js` thì chạy `python scripts/update-story-ui.py` trước khi build như trước.
+
+
+## Hoàn thiện bản đồ và bộ ghép
+
+Trang chủ dùng nền bản đồ chibi riêng ở heritage/images/dongho-village-map-v3.webp với sáu điểm bấm và danh sách chọn nhanh trên điện thoại. Prompt ở heritage/map-design.txt. Ảnh tranh gốc không đổi.
+
+heritage/object-masks.json chứa đa giác của 12 hình tượng Thầy đồ cóc và 10 hình tượng Thư hùng. web/heritage-masks.js dùng điểm ảnh gốc cho mảnh và nền, không vẽ bù phần bị che. Mảnh cũ được giữ để mở bản thảo đã lưu, không xuất hiện trong bộ mảnh mới.
+
+Ô chữ có 80 ô cho 10 hàng, nhận nhập có dấu hoặc dán nguyên đáp án, hỗ trợ phím mũi tên và Backspace. Video giới thiệu là bản minh họa 76 giây dựng tại máy từ học liệu và giọng đọc có sẵn, có thể thay bằng video gốc sau. Hai bản đọc có câu chỉ dẫn đã được tạo lại sau biên tập.

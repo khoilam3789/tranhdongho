@@ -11,7 +11,7 @@ export async function externalizeCloudMedia(html,outputDirectory){
   const isAssets=body=>/^\s*window\.__ASSETS\s*=/.test(body);
   const isCatalog=body=>/^\s*window\.DONGHO_CATALOG\s*=/.test(body);
   for(const [,attributes,body]of scripts){
-    if(isAssets(body)||isCatalog(body)||/id="(?:motion-assets|heritage-data)"/.test(attributes))vm.runInContext(body,context,{timeout:10000});
+    if(isAssets(body)||isCatalog(body)||/id="(?:motion-assets|heritage-data|object-mask-data)"/.test(attributes))vm.runInContext(body,context,{timeout:10000});
   }
   const original=context.window.__ASSETS,content=context.window.HERITAGE_REQUIREMENTS;
   if(!original||!content)throw new Error('Cloud media requires the complete learning catalogue.');
@@ -32,7 +32,7 @@ export async function externalizeCloudMedia(html,outputDirectory){
   const json=value=>JSON.stringify(value).replace(/</g,'\\u003c');
   html=html.replace(/<script([^>]*)>([\s\S]*?)<\/script>/g,(all,attributes,body)=>{
     if(isAssets(body))return '<script>window.__ASSETS='+json(assets)+';</script>';
-    if(attributes.includes('id="motion-assets"'))return '';
+    if(attributes.includes('id="motion-assets"')||attributes.includes('id="object-mask-data"'))return '';
     // SVG crops above are emitted as self-contained SVG files, preserving their
     // embedded original PNG. Do not rebuild them with external nested images.
     if(attributes.includes('id="heritage-data"'))return '<script id="heritage-data">window.HERITAGE_REQUIREMENTS='+json(content)+';</script>';

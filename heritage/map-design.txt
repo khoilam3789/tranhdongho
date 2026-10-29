@@ -1,0 +1,5 @@
+Tool: built-in ImageGen
+Asset: heritage/images/dongho-village-map-v3.webp
+Original archived: artifacts/village-map-original-v3.png
+
+Prompt: Original Vietnamese Dong Ho educational village exploration map on ivory parchment, teal rivers, green paddies, lotus ponds and red tiled roofs. Six separated chibi dioramas in two rows of three: upper-left storytelling pavilion, upper-center village gate with elder and child, upper-right do-paper workshop, lower-left five natural pigment bowls, lower-center woodblock printing, lower-right children solving puzzles. Adorable large-headed Vietnamese chibi characters with traditional clothing, hand-painted sculptural detail. No text or signs: six accessible wooden sign buttons are rendered in HTML. Do not redraw the actual Dong Ho painting source assets.

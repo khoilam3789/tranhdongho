@@ -52,7 +52,7 @@ const DEFAULT_STORY='Một ngày, những hình tượng từ bức tranh Lợn 
 const STORE='dongho.lab.pro.v1';
 let state={paintingId:'pig',studioId:'pig',placed:[],selected:null,bg:0,storyTitle:'Chuyện kể từ bức tranh Đông Hồ',storyTheme:'family',storyText:DEFAULT_STORY,logs:[],quiz:null,idCounter:0};
 let undo=[],redo=[],currentView='home',movieRunning=false,recorderRunning=false,renderToken=0,savingTimer=null;
-const imgCache={};for(const d of [...paintings.map(x=>x.img),...pieces.map(x=>x.img),...studios.map(x=>x.background).filter(Boolean)]){const im=new Image();im.src=assets(d);imgCache[d]=im;}
+const imgCache={};for(const d of [...paintings.map(x=>x.img),...pieces.map(x=>x.img),...studios.map(x=>x.background).filter(Boolean)]){Object.defineProperty(imgCache,d,{configurable:true,get(){const im=new Image();im.src=assets(d);Object.defineProperty(imgCache,d,{value:im,configurable:true});return im;}});}
 function alertToast(s){const el=$('#toast');el.textContent=s;el.classList.add('visible');clearTimeout(alertToast.t);alertToast.t=setTimeout(()=>el.classList.remove('visible'),3200);}
 function safeState(){return {paintingId:state.paintingId,studioId:state.studioId,placed:state.placed,selected:state.selected,bg:state.bg,storyTitle:state.storyTitle,storyTheme:state.storyTheme,storyText:state.storyText,logs:state.logs.slice(-350),quiz:state.quiz,quizVersion:2,idCounter:state.idCounter};}
 function persist(){clearTimeout(savingTimer);$('#saveStatus').textContent='Đang lưu…';savingTimer=setTimeout(()=>{try{localStorage.setItem(STORE,JSON.stringify(safeState()));$('#saveStatus').textContent='Đã lưu trên thiết bị';}catch(e){$('#saveStatus').textContent='Chế độ không lưu';}},170);}
@@ -100,8 +100,8 @@ function updateStudioShelf(){
  const studio=studios.find(q=>q.id===state.studioId)||studios[0];
  const sel=$('#studioPaintingSelect');if(sel){sel.innerHTML=studios.map(q=>`<option value="${q.id}">${escapeHTML(q.title)}</option>`).join('');sel.value=studio.id;}
  $('#pieceShelfTitle').textContent=`Hình tượng: ${studio.title}`;
- $('#studioSourceStatus').textContent=['teacher','roosterfamily'].includes(studio.id)?'Ảnh gốc từ bộ học liệu; tự căn các mảnh theo hình chuẩn.':studio.complete?'Mảnh ảnh được chuẩn bị từ bộ tranh nhóm cung cấp; nền và mảnh có thể đã được phục dựng.':'Chưa đủ mảnh để phục dựng tranh hoàn chỉnh; có thể thực hành bố cục nhưng cần bổ sung hình người.';
- const grid=$('#piecesGrid');const items=pieces.filter(z=>z.painting===studio.id);
+ $('#studioSourceStatus').textContent=['teacher','roosterfamily'].includes(studio.id)?'Các hình tượng được tách từ ảnh gốc bằng mặt nạ SVG. Không vẽ bù phần bị che; tự căn theo hình chuẩn.':studio.complete?'Mảnh ảnh được chuẩn bị từ bộ tranh nhóm cung cấp; nền và mảnh có thể đã được phục dựng.':'Chưa đủ mảnh để phục dựng tranh hoàn chỉnh; có thể thực hành bố cục nhưng cần bổ sung hình người.';
+ const grid=$('#piecesGrid');const items=pieces.filter(z=>z.painting===studio.id&&!z.legacyOnly);
  grid.innerHTML=items.map(p=>`<button type="button" draggable="true" class="piece-option" data-piece="${p.id}" title="${escapeHTML(p.desc)}"><img draggable="false" src="${assets(p.img)}" alt=""/><strong>${escapeHTML(p.name)}</strong></button>`).join('');
  grid.querySelectorAll('[data-piece]').forEach(btn=>{btn.addEventListener('click',()=>addPiece(btn.dataset.piece));btn.addEventListener('dragstart',e=>{e.dataTransfer.setData('text/plain',btn.dataset.piece);e.dataTransfer.effectAllowed='copy';});});
 }
@@ -129,7 +129,7 @@ function composition(ctx,w,h){
 }
 
 function saveBlob(blob,filename){const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);}
-function downloadArt(){if(!state.placed.length){alertToast('Hãy thêm ít nhất một mảnh ghép trước khi xuất tranh.');return;}const c=document.createElement('canvas');c.width=1500;c.height=1000;const imgs=state.placed.map(p=>imgCache[pieces.find(x=>x.id===p.key)?.img]);const go=()=>{composition(c.getContext('2d'),c.width,c.height);c.toBlob(blob=>{if(blob){saveBlob(blob,'dong-ho-lab-tranh-sang-tao.png');logEvent('export_png');alertToast('Đã tạo ảnh PNG. Kiểm tra mục Tải xuống.');}else alertToast('Không thể xuất PNG trên trình duyệt này.');},'image/png');};if(imgs.every(i=>i?.complete&&i.naturalWidth))go();else Promise.all(imgs.map(im=>im?.decode?.().catch(()=>{})||Promise.resolve())).then(go);}
+function downloadArt(){if(!state.placed.length){alertToast('Hãy thêm ít nhất một mảnh ghép trước khi xuất tranh.');return;}const c=document.createElement('canvas');c.width=1500;c.height=1000;const kit=studios.find(s=>s.id===state.studioId);const imgs=[...state.placed.map(p=>imgCache[pieces.find(x=>x.id===p.key)?.img]),...(state.bg===0&&kit?.background?[imgCache[kit.background]]:[])];const go=()=>{composition(c.getContext('2d'),c.width,c.height);c.toBlob(blob=>{if(blob){saveBlob(blob,'dong-ho-lab-tranh-sang-tao.png');logEvent('export_png');alertToast('Đã tạo ảnh PNG. Kiểm tra mục Tải xuống.');}else alertToast('Không thể xuất PNG trên trình duyệt này.');},'image/png');};if(imgs.every(i=>i?.complete&&i.naturalWidth))go();else Promise.all(imgs.map(im=>im?.decode?.().catch(()=>{})||Promise.resolve())).then(go);}
 let movieAnimationFrame = null;
 let moviePreviewPreparing = false;
 SVG.pause = '<path d="M8 5v14M16 5v14"/>';
