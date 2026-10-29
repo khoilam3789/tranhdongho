@@ -1,0 +1,577 @@
+{
+  "paintings": [
+    {
+      "id": "pig",
+      "name": "Lợn đàn",
+      "subtitle": "Gia đình · Ước vọng no đủ",
+      "img": "assets/image2.jpg",
+      "kind": "Sinh hoạt · Chúc tụng",
+      "summary": "Bức tranh đặt lợn mẹ cùng các lợn con trong một bố cục quây quần. Đây là cách hình tượng vật nuôi biểu đạt khát vọng sung túc trong đời sống nông nghiệp.",
+      "symbols": [
+        {
+          "name": "Lợn mẹ",
+          "desc": "Là hình tượng trung tâm, gợi sự sinh sôi và chăm sóc con cái.",
+          "img": "assets/me_lon.png",
+          "x": 52,
+          "y": 37
+        },
+        {
+          "name": "Các lợn con",
+          "desc": "Đàn con tạo nên bố cục vui tươi, gợi sự quây quần, đông đủ trong gia đình.",
+          "img": "assets/lon_con_1.png",
+          "x": 51,
+          "y": 76
+        },
+        {
+          "name": "Hoa văn xoáy",
+          "desc": "Những vòng xoáy là nét trang trí nổi bật. Không nên gán một ý nghĩa duy nhất cho từng xoáy nếu chưa có nguồn.",
+          "img": null,
+          "x": 31,
+          "y": 45
+        }
+      ],
+      "source": "Bộ tư liệu ảnh và chú giải trong báo cáo dự án Đông Hồ Lab.",
+      "note": "Một số chi tiết có nhiều cách hiểu; nên đối chiếu dị bản và chuyên gia trước khi giới thiệu công khai."
+    },
+    {
+      "id": "mouse",
+      "name": "Đám cưới chuột",
+      "subtitle": "Trào phúng · Quan hệ xã hội",
+      "img": "assets/image1.jpg",
+      "kind": "Trào phúng · Đời sống",
+      "summary": "Bức tranh nhân hóa một đám rước chuột để kể câu chuyện giàu sắc thái châm biếm; học sinh cần phân biệt điều nhìn thấy và suy luận về ý nghĩa xã hội.",
+      "symbols": [
+        {
+          "name": "Đoàn chuột rước",
+          "desc": "Nhân vật chuột mang lễ vật, nhạc cụ và tham gia đám rước, tạo nhịp kể chuyện.",
+          "img": null,
+          "x": 40,
+          "y": 67
+        },
+        {
+          "name": "Hình tượng mèo",
+          "desc": "Thường được xem là trọng tâm của cách giải thích tính châm biếm, gợi quan hệ giữa kẻ yếu và kẻ mạnh.",
+          "img": null,
+          "x": 70,
+          "y": 24
+        },
+        {
+          "name": "Lễ vật và nhạc cụ",
+          "desc": "Gợi không khí cưới hỏi và giúp người xem hiểu diễn tiến đám rước.",
+          "img": null,
+          "x": 56,
+          "y": 49
+        }
+      ],
+      "source": "Báo cáo Word Đông Hồ Lab; chú giải rút gọn để học tập.",
+      "note": "Một số chi tiết có nhiều cách hiểu; nên đối chiếu dị bản và chuyên gia trước khi giới thiệu công khai."
+    },
+    {
+      "id": "hen",
+      "name": "Đàn gà mẹ con",
+      "subtitle": "Sum vầy · Chăm sóc",
+      "img": "assets/image3.jpg",
+      "kind": "Gia đình · Sinh sôi",
+      "summary": "Gà mẹ và đàn con xuất hiện gần nhau, tạo hình ảnh sinh hoạt đầm ấm. Cách hiểu về chăm sóc và gắn bó là một hướng đọc phù hợp cho hoạt động học tập.",
+      "symbols": [
+        {
+          "name": "Gà mẹ",
+          "desc": "Thể hiện sự chăm sóc, dẫn dắt và bảo vệ đàn con.",
+          "img": null,
+          "x": 37,
+          "y": 43
+        },
+        {
+          "name": "Gà con",
+          "desc": "Mỗi con có dáng vẻ khác nhau, tạo nhịp điệu sinh động, gợi không khí gia đình.",
+          "img": null,
+          "x": 61,
+          "y": 70
+        },
+        {
+          "name": "Sắp xếp hình tượng",
+          "desc": "Những mảng màu và nét viền tạo bố cục rõ, có thể nhận diện từng nhân vật.",
+          "img": null,
+          "x": 30,
+          "y": 78
+        }
+      ],
+      "source": "Tài liệu “Ý nghĩa tranh dân gian Đông Hồ” do nhóm cung cấp; chú giải biên tập để học sinh tìm hiểu.",
+      "note": "Một số chi tiết có nhiều cách hiểu; nên đối chiếu dị bản và chuyên gia trước khi giới thiệu công khai."
+    },
+    {
+      "id": "fortune",
+      "name": "Vinh hoa – Phú quý",
+      "subtitle": "Ước nguyện tốt đẹp",
+      "img": "assets/image4.jpg",
+      "kind": "Chúc tụng · Phúc lành",
+      "summary": "Cặp tranh dùng hình tượng em bé và vật nuôi để gửi gắm ước vọng tốt đẹp. Cần đối chiếu từng phiên bản khi giải thích các hình tượng.",
+      "symbols": [
+        {
+          "name": "Em bé",
+          "desc": "Hình tượng trẻ nhỏ gắn với lời chúc may mắn và niềm vui gia đình.",
+          "img": null,
+          "x": 40,
+          "y": 42
+        },
+        {
+          "name": "Con vật đi kèm",
+          "desc": "Gà, vịt hoặc những chi tiết trang trí có thể mang tầng nghĩa riêng theo mỗi tranh.",
+          "img": null,
+          "x": 58,
+          "y": 67
+        },
+        {
+          "name": "Bố cục cặp tranh",
+          "desc": "Cách đặt hai tác phẩm bổ sung cho nhau tạo một thông điệp chúc tụng.",
+          "img": null,
+          "x": 77,
+          "y": 40
+        }
+      ],
+      "source": "Bộ báo cáo Đông Hồ Lab; thông tin khái quát, chưa là chú giải từng dị bản.",
+      "note": "Một số chi tiết có nhiều cách hiểu; nên đối chiếu dị bản và chuyên gia trước khi giới thiệu công khai."
+    },
+    {
+      "id": "teacher",
+      "name": "Thầy đồ cóc",
+      "subtitle": "Lớp học · Trào phúng",
+      "img": "assets/teacher.webp",
+      "kind": "Học tập · Châm biếm",
+      "summary": "Các nhân vật cóc, nhái được nhân hóa trong khung cảnh lớp học. Bức tranh có thể gợi chuyện tôn sư trọng đạo nhưng cũng thể hiện sắc thái trào phúng đối với những tập quán dạy học cũ.",
+      "symbols": [
+        {
+          "name": "Thầy đồ cóc",
+          "desc": "Nhân vật lớn ngồi ở vị trí trung tâm bên bàn học và đồ dùng giảng dạy.",
+          "img": "assets/teacher.webp",
+          "x": 32,
+          "y": 52
+        },
+        {
+          "name": "Học trò cóc và nhái",
+          "desc": "Các học trò có hành động khác nhau: nghe giảng, đọc bài, phục vụ, tham gia hoạt động của lớp.",
+          "img": null,
+          "x": 72,
+          "y": 56
+        },
+        {
+          "name": "Sách, nghiên, bút, đèn",
+          "desc": "Đồ dùng tạo bối cảnh giáo dục truyền thống và nhắc tới phương pháp học xưa.",
+          "img": null,
+          "x": 41,
+          "y": 64
+        },
+        {
+          "name": "Cảnh phạt học trò",
+          "desc": "Chi tiết có thể được đọc như sự châm biếm thói dạy học cứng nhắc, không phải hình mẫu giáo dục hiện nay.",
+          "img": null,
+          "x": 71,
+          "y": 73
+        }
+      ],
+      "source": "Tài liệu “Ý nghĩa tranh dân gian Đông Hồ” do nhóm cung cấp; chú giải biên tập để học sinh tìm hiểu.",
+      "note": "Một số chi tiết có nhiều cách hiểu; nên đối chiếu dị bản và chuyên gia trước khi giới thiệu công khai."
+    },
+    {
+      "id": "scholar",
+      "name": "Hiếu học – Chăn trâu đọc sách",
+      "subtitle": "Tinh thần học tập",
+      "img": "assets/scholar.webp",
+      "kind": "Giáo dục · Đời sống",
+      "summary": "Hình tượng người đọc sách trong khi chăn trâu gợi sự chăm học, kiên trì dù gắn với lao động đồng áng. Bức tranh khuyến khích sự ham hiểu biết và nỗ lực tự học.",
+      "symbols": [
+        {
+          "name": "Người đọc sách",
+          "desc": "Nhân vật trung tâm cầm sách, thể hiện ý thức học tập trong đời sống thường ngày.",
+          "img": "assets/scholar_01_Nguoi_va_sach.webp",
+          "x": 53,
+          "y": 45
+        },
+        {
+          "name": "Con trâu",
+          "desc": "Vật nuôi gắn với lao động nông nghiệp, tạo bối cảnh dân dã cho câu chuyện hiếu học.",
+          "img": "assets/scholar_02_Trau.webp",
+          "x": 46,
+          "y": 74
+        },
+        {
+          "name": "Cuốn sách",
+          "desc": "Gợi sự quý trọng tri thức, nhấn mạnh việc học không chỉ có ở trường lớp.",
+          "img": null,
+          "x": 56,
+          "y": 40
+        }
+      ],
+      "source": "Tài liệu “Ý nghĩa tranh dân gian Đông Hồ” do nhóm cung cấp; chú giải biên tập để học sinh tìm hiểu.",
+      "note": "Một số chi tiết có nhiều cách hiểu; nên đối chiếu dị bản và chuyên gia trước khi giới thiệu công khai."
+    },
+    {
+      "id": "procession",
+      "name": "Vinh quy bái tổ",
+      "subtitle": "Đỗ đạt · Nhớ nguồn",
+      "img": "assets/procession.webp",
+      "kind": "Lễ nghi · Chúc tụng",
+      "summary": "Đoàn rước mô tả người đỗ đạt trở về quê trong không khí long trọng. Có thể khai thác tinh thần trọng học và biết ơn cha mẹ, thầy cô, cộng đồng.",
+      "symbols": [
+        {
+          "name": "Người đỗ đạt",
+          "desc": "Nhân vật mặc lễ phục, cưỡi ngựa; là trọng tâm của đoàn vinh quy.",
+          "img": "assets/procession_03_Nguoi_cuoi_ngua.webp",
+          "x": 52,
+          "y": 53
+        },
+        {
+          "name": "Ngựa",
+          "desc": "Con vật xuất hiện trong đoàn rước, góp phần diễn tả nghi lễ vinh quy.",
+          "img": null,
+          "x": 49,
+          "y": 76
+        },
+        {
+          "name": "Cờ, biển, lọng",
+          "desc": "Là đạo cụ nghi lễ góp phần tạo không khí trang trọng, thể hiện vị thế và lễ tiết.",
+          "img": "assets/procession_01_Nguoi_cam_co.webp",
+          "x": 18,
+          "y": 40
+        },
+        {
+          "name": "Người tham gia đoàn rước",
+          "desc": "Những nhân vật cầm vật phẩm nghi lễ gợi sự chào đón, chia vui của cộng đồng.",
+          "img": "assets/procession_05_Nguoi_cam_long.webp",
+          "x": 77,
+          "y": 53
+        }
+      ],
+      "source": "Tài liệu “Ý nghĩa tranh dân gian Đông Hồ” do nhóm cung cấp; chú giải biên tập để học sinh tìm hiểu.",
+      "note": "Một số chi tiết có nhiều cách hiểu; nên đối chiếu dị bản và chuyên gia trước khi giới thiệu công khai."
+    },
+    {
+      "id": "flock",
+      "name": "Đàn gà mẹ con – Bộ ghép lớp",
+      "subtitle": "Gà mẹ · Nhiều dáng gà con",
+      "img": "assets/flock.webp",
+      "kind": "Gia đình · Sáng tạo",
+      "summary": "Bộ hình tách lớp giúp học sinh nhận diện gà mẹ và các nhóm gà con rồi sắp xếp lại thành một bố cục mới. Ảnh tách lớp dùng cho học liệu, không phải ván khắc gốc.",
+      "symbols": [
+        {
+          "name": "Gà mẹ",
+          "desc": "Nhân vật lớn, nổi bật nhất trong bố cục; gợi sự chăm sóc và bao bọc đàn con.",
+          "img": "assets/flock_01_Ga_me.webp",
+          "x": 36,
+          "y": 42
+        },
+        {
+          "name": "Nhóm gà con",
+          "desc": "Các cặp và cá thể gà con được tách thành mảnh riêng để người học phân biệt hình dáng.",
+          "img": "assets/flock_02_Doi_ga_tren_lung.webp",
+          "x": 62,
+          "y": 57
+        },
+        {
+          "name": "Chuyển động đàn gà",
+          "desc": "Một số gà con vươn cánh hoặc chạy, tạo sức sống cho hình.",
+          "img": "assets/flock_03_Ga_dang_bay.webp",
+          "x": 72,
+          "y": 31
+        }
+      ],
+      "source": "Tài liệu tranh Đông Hồ và bộ ảnh tách lớp người dùng cung cấp; ảnh ghép là học liệu dẫn xuất.",
+      "note": "Một số chi tiết có nhiều cách hiểu; nên đối chiếu dị bản và chuyên gia trước khi giới thiệu công khai."
+    },
+    {
+      "id": "rooster",
+      "name": "Gà hoa hồng",
+      "subtitle": "Ngũ đức · Vẻ đẹp tạo hình",
+      "img": "assets/rooster.webp",
+      "kind": "Biểu tượng · Chúc tụng",
+      "summary": "Hình tượng gà trống và hoa được đặt trong một bố cục trang trí. Truyền thống thường gắn gà trống với năm đức tính văn, võ, dũng, nhân, tín.",
+      "symbols": [
+        {
+          "name": "Gà trống",
+          "desc": "Gà trống thường được diễn giải theo năm đức tính: văn, võ, dũng, nhân, tín.",
+          "img": "assets/rooster_01_Ga_trong.webp",
+          "x": 51,
+          "y": 42
+        },
+        {
+          "name": "Mào, cựa và dáng đứng",
+          "desc": "Đặc điểm tạo hình giúp nhận diện nhân vật; liên hệ ngũ đức là cách giải thích mang tính biểu tượng.",
+          "img": null,
+          "x": 56,
+          "y": 53
+        },
+        {
+          "name": "Hoa hồng",
+          "desc": "Chi tiết tạo sự cân bằng giữa hình gà và mảng trang trí thực vật; một số cách đọc liên hệ phúc lành.",
+          "img": null,
+          "x": 45,
+          "y": 22
+        }
+      ],
+      "source": "Tài liệu “Ý nghĩa tranh dân gian Đông Hồ”; các diễn giải ngũ đức và hoa hồng cần được thẩm định theo phiên bản.",
+      "note": "Một số chi tiết có nhiều cách hiểu; nên đối chiếu dị bản và chuyên gia trước khi giới thiệu công khai."
+    },
+    {
+      "id": "roosterfamily",
+      "name": "Gia đình gà – Thư hùng",
+      "subtitle": "Đoàn tụ · Gia đình",
+      "img": "assets/roosterfamily.webp",
+      "kind": "Gia đình · Chúc tụng",
+      "summary": "Tranh diễn tả gà trống, gà mái và đàn con trong một bố cục quây quần, gợi tinh thần đoàn tụ, ấm no và mong ước gia đình hạnh phúc.",
+      "symbols": [
+        {
+          "name": "Gà trống",
+          "desc": "Một thành viên lớn của đàn gà, có thể được đọc như hình tượng che chở.",
+          "img": null,
+          "x": 61,
+          "y": 36
+        },
+        {
+          "name": "Gà mái",
+          "desc": "Xuất hiện cạnh đàn con và gà trống, góp phần tạo thành hình ảnh gia đình.",
+          "img": null,
+          "x": 33,
+          "y": 55
+        },
+        {
+          "name": "Đàn gà con",
+          "desc": "Gợi sự đông vui, sum họp và tiếp nối giữa các thế hệ.",
+          "img": null,
+          "x": 49,
+          "y": 80
+        }
+      ],
+      "source": "Tài liệu “Ý nghĩa tranh dân gian Đông Hồ” do nhóm cung cấp; chú giải biên tập để học sinh tìm hiểu.",
+      "note": "Một số chi tiết có nhiều cách hiểu; nên đối chiếu dị bản và chuyên gia trước khi giới thiệu công khai."
+    }
+  ],
+  "pieces": [
+    {
+      "id": "mother",
+      "painting": "pig",
+      "name": "Lợn mẹ",
+      "img": "assets/me_lon.png",
+      "width": 46,
+      "desc": "Hình tượng lợn mẹ tách thủ công từ tranh Lợn đàn."
+    },
+    {
+      "id": "child1",
+      "painting": "pig",
+      "name": "Lợn con vàng",
+      "img": "assets/lon_con_1.png",
+      "width": 22,
+      "desc": "Hình tượng lợn con tách thủ công."
+    },
+    {
+      "id": "child2",
+      "painting": "pig",
+      "name": "Lợn con xanh",
+      "img": "assets/lon_con_2.png",
+      "width": 22,
+      "desc": "Hình tượng lợn con tách thủ công."
+    },
+    {
+      "id": "child3",
+      "painting": "pig",
+      "name": "Lợn con nâu",
+      "img": "assets/lon_con_3.png",
+      "width": 22,
+      "desc": "Hình tượng lợn con tách thủ công."
+    },
+    {
+      "id": "flock_1",
+      "painting": "flock",
+      "name": "Gà mẹ",
+      "img": "assets/flock_01_Ga_me.webp",
+      "width": 40,
+      "desc": "Hình tượng/nhóm gà con được tách từ tranh để thực hành tương tác."
+    },
+    {
+      "id": "flock_2",
+      "painting": "flock",
+      "name": "Đôi gà trên lưng",
+      "img": "assets/flock_02_Doi_ga_tren_lung.webp",
+      "width": 23,
+      "desc": "Hình tượng/nhóm gà con được tách từ tranh để thực hành tương tác."
+    },
+    {
+      "id": "flock_3",
+      "painting": "flock",
+      "name": "Gà đang bay",
+      "img": "assets/flock_03_Ga_dang_bay.webp",
+      "width": 23,
+      "desc": "Hình tượng/nhóm gà con được tách từ tranh để thực hành tương tác."
+    },
+    {
+      "id": "flock_4",
+      "painting": "flock",
+      "name": "Gà đỏ bên phải",
+      "img": "assets/flock_04_Ga_do_ben_phai.webp",
+      "width": 23,
+      "desc": "Hình tượng/nhóm gà con được tách từ tranh để thực hành tương tác."
+    },
+    {
+      "id": "flock_5",
+      "painting": "flock",
+      "name": "Gà xanh trắng",
+      "img": "assets/flock_05_Ga_xanh_trang.webp",
+      "width": 23,
+      "desc": "Hình tượng/nhóm gà con được tách từ tranh để thực hành tương tác."
+    },
+    {
+      "id": "flock_6",
+      "painting": "flock",
+      "name": "Gà nâu phía dưới",
+      "img": "assets/flock_06_Ga_nau_phia_duoi.webp",
+      "width": 23,
+      "desc": "Hình tượng/nhóm gà con được tách từ tranh để thực hành tương tác."
+    },
+    {
+      "id": "flock_7",
+      "painting": "flock",
+      "name": "Đôi gà dưới trái",
+      "img": "assets/flock_07_Doi_ga_duoi_trai.webp",
+      "width": 23,
+      "desc": "Hình tượng/nhóm gà con được tách từ tranh để thực hành tương tác."
+    },
+    {
+      "id": "flock_8",
+      "painting": "flock",
+      "name": "Đôi gà dưới phải",
+      "img": "assets/flock_08_Doi_ga_duoi_phai.webp",
+      "width": 23,
+      "desc": "Hình tượng/nhóm gà con được tách từ tranh để thực hành tương tác."
+    },
+    {
+      "id": "scholar_1",
+      "painting": "scholar",
+      "name": "Người học và sách",
+      "img": "assets/scholar_01_Nguoi_va_sach.webp",
+      "width": 28,
+      "desc": "Học sinh nhận diện người đọc sách, biểu tượng hiếu học."
+    },
+    {
+      "id": "scholar_2",
+      "painting": "scholar",
+      "name": "Con trâu",
+      "img": "assets/scholar_02_Trau.webp",
+      "width": 46,
+      "desc": "Trâu gắn với đời sống lao động nông thôn."
+    },
+    {
+      "id": "procession_1",
+      "painting": "procession",
+      "name": "Người cầm cờ",
+      "img": "assets/procession_01_Nguoi_cam_co.webp",
+      "width": 19,
+      "desc": "Nhân vật và đạo cụ nghi lễ trong tranh Vinh quy bái tổ."
+    },
+    {
+      "id": "procession_2",
+      "painting": "procession",
+      "name": "Người cầm biển",
+      "img": "assets/procession_02_Nguoi_cam_bien.webp",
+      "width": 18,
+      "desc": "Nhân vật và đạo cụ nghi lễ trong tranh Vinh quy bái tổ."
+    },
+    {
+      "id": "procession_3",
+      "painting": "procession",
+      "name": "Người cưỡi ngựa",
+      "img": "assets/procession_03_Nguoi_cuoi_ngua.webp",
+      "width": 32,
+      "desc": "Nhân vật và đạo cụ nghi lễ trong tranh Vinh quy bái tổ."
+    },
+    {
+      "id": "procession_4",
+      "painting": "procession",
+      "name": "Người cầm ô",
+      "img": "assets/procession_04_Nguoi_cam_o.webp",
+      "width": 18,
+      "desc": "Nhân vật và đạo cụ nghi lễ trong tranh Vinh quy bái tổ."
+    },
+    {
+      "id": "procession_5",
+      "painting": "procession",
+      "name": "Người cầm lọng",
+      "img": "assets/procession_05_Nguoi_cam_long.webp",
+      "width": 18,
+      "desc": "Nhân vật và đạo cụ nghi lễ trong tranh Vinh quy bái tổ."
+    },
+    {
+      "id": "rooster_1",
+      "painting": "rooster",
+      "name": "Gà trống",
+      "img": "assets/rooster_01_Ga_trong.webp",
+      "width": 47,
+      "desc": "Hình gà trống tách lớp; có thể ghép trên nền hoa và đá."
+    },
+    {
+      "id": "kite_1",
+      "painting": "kite",
+      "name": "Con trâu – thả diều",
+      "img": "assets/kite_02_Trau.webp",
+      "width": 47,
+      "desc": "Bộ học liệu chưa có hình người thả diều; đây chưa phải tác phẩm ghép hoàn chỉnh."
+    },
+    {
+      "id": "flute_1",
+      "painting": "flute",
+      "name": "Con trâu – thổi sáo",
+      "img": "assets/flute_02_Trau.webp",
+      "width": 47,
+      "desc": "Bộ học liệu chưa có hình người thổi sáo; đây chưa phải tác phẩm ghép hoàn chỉnh."
+    }
+  ],
+  "studios": [
+    {
+      "id": "pig",
+      "title": "Lợn đàn",
+      "background": null,
+      "paintingId": "pig",
+      "complete": true
+    },
+    {
+      "id": "flock",
+      "title": "Đàn gà mẹ con",
+      "background": "assets/flock_background.webp",
+      "paintingId": "flock",
+      "complete": true
+    },
+    {
+      "id": "scholar",
+      "title": "Hiếu học",
+      "background": "assets/scholar_background.webp",
+      "paintingId": "scholar",
+      "complete": true
+    },
+    {
+      "id": "procession",
+      "title": "Vinh quy bái tổ",
+      "background": "assets/procession_background.webp",
+      "paintingId": "procession",
+      "complete": true
+    },
+    {
+      "id": "rooster",
+      "title": "Gà hoa hồng",
+      "background": "assets/rooster_background.webp",
+      "paintingId": "rooster",
+      "complete": true
+    },
+    {
+      "id": "kite",
+      "title": "Thả diều (chưa đủ mảnh)",
+      "background": "assets/kite_background.webp",
+      "paintingId": null,
+      "complete": false
+    },
+    {
+      "id": "flute",
+      "title": "Thổi sáo (chưa đủ mảnh)",
+      "background": "assets/flute_background.webp",
+      "paintingId": null,
+      "complete": false
+    }
+  ]
+}

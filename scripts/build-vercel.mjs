@@ -1,5 +1,6 @@
 import {mkdir,readFile,writeFile,cp} from 'node:fs/promises';
 import {build} from 'esbuild';
+await import('./update-heritage-ui.mjs');
 await mkdir('public/ffmpeg',{recursive:true});
 let html=await readFile('Dongho.html','utf8');
 html=html.replace('</head>','<script defer src="/cloud-video.js"></script></head>');
@@ -10,4 +11,5 @@ await build({entryPoints:['web/cloud-video.js'],outfile:'public/cloud-video.js',
 await cp('node_modules/@ffmpeg/ffmpeg/dist/esm','public/ffmpeg',{recursive:true});
 await cp('node_modules/@ffmpeg/core/dist/esm/ffmpeg-core.js','public/ffmpeg/ffmpeg-core.js');
 await cp('node_modules/@ffmpeg/core/dist/esm/ffmpeg-core.wasm','public/ffmpeg/ffmpeg-core.wasm');
+await cp('heritage','public/heritage',{recursive:true});
 console.log('Built static frontend with browser video composer; narration disabled.');

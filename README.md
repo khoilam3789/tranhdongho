@@ -131,10 +131,23 @@ Biến môi trường server cần có:
 - `BYTEPLUS_API_KEY`: key ModelArk Singapore, chỉ lưu trên Vercel.
 - `BYTEPLUS_FREE_QUOTA_CONFIRMED=true`: chỉ đặt sau khi tài khoản còn quota và bật Free Credits Only Mode cho model.
 
-Bản cloud ẩn giọng đọc. FE tạo từng tác vụ, hỏi trạng thái qua API ngắn và tải MP4 qua phản hồi streaming. Các mức 15–30 giây ghép bằng FFmpeg WebAssembly single-thread trong trình duyệt, tải khoảng 32 MB ở lần đầu. Không cần Python hoặc Railway. Bộ ghép được tải trước khi gửi các tác vụ dài. Máy yếu có thể ghép chậm. API key không được nhúng vào HTML/JS và không đưa `.env` lên GitHub.
+Bản cloud ẩn tính năng ghép giọng vào video; giọng đọc bài học được tạo sẵn vẫn nghe được. FE tạo từng tác vụ, hỏi trạng thái qua API ngắn và tải MP4 qua phản hồi streaming. Các mức 15–30 giây ghép bằng FFmpeg WebAssembly single-thread trong trình duyệt, tải khoảng 32 MB ở lần đầu. Không cần Python hoặc Railway. Bộ ghép được tải trước khi gửi các tác vụ dài. Máy yếu có thể ghép chậm. API key không được nhúng vào HTML/JS và không đưa `.env` lên GitHub.
 
 Video AI vẫn có thể làm lệch chi tiết so với ảnh đầu, dù prompt giữ tranh và mỗi đoạn đều dùng cùng tranh gốc. API công khai dùng quota tài khoản được cấu hình; quản lý quyền chia sẻ đường dẫn và quota tại Vercel/BytePlus.
 
 ### Nối tiếp cảnh trong video dài
 
 Đoạn đầu dùng tranh gốc. Sau mỗi đoạn, FFmpeg lấy khung cuối làm ảnh đầu cho đoạn tiếp theo; prompt yêu cầu tiếp tục đúng vị trí/tư thế và hướng chuyển động, không quay lại khung gốc hoặc đổi góc máy. Cả bản local và cloud dùng cách nối tiếp này. Không lấy được khung nối thì dừng trước khi gửi đoạn kế tiếp, không tự tạo lại. Đây là ràng buộc ảnh/prompt, không bảo đảm AI giữ nguyên tuyệt đối mọi chi tiết giữa các đoạn.
+
+
+## Học liệu, giọng đọc và trò chơi di sản
+
+Nội dung bài học và chú giải sáu tranh nằm trong `heritage/content.json`; ảnh gốc nằm ở `heritage/images/`. Các bản đọc tiếng Việt được tạo sẵn bằng Microsoft Edge, lưu thành MP3 trong `heritage/audio/`. Người học nghe bằng trình phát HTML, không gọi dịch vụ TTS hoặc dùng quota BytePlus khi nghe. Dịch vụ Edge có thể tạm thời không khả dụng khi cần tạo lại giọng đọc.
+
+Trang chủ có sáu lối vào bài học và trò chơi. Phần giới thiệu cho chọn video từ máy để xem thử vì học liệu chưa kèm tệp video; video chọn tại đây không tự tải lên máy chủ. Danh mục đã bỏ Đám cưới chuột, Vinh hoa – Phú quý và gộp hai mục Đàn gà trùng nhau.
+
+Xưởng ghép có nút bật hình chuẩn mờ để tự đối chiếu. Các mảnh vẫn kéo hoặc di chuyển bằng phím mũi tên được; nút này không tự xếp hay chấm bố cục. Bộ Gia đình gà dùng ô cắt SVG tham chiếu trực tiếp ảnh gốc, không vẽ lại các hình tượng.
+
+Ba trò chơi gồm giải 10 hàng ngang, đoán tên 5 tranh và nối 6 cặp thông tin. Bài ôn tập chọn 10 câu từ ngân hàng 37 câu, đảo lựa chọn và chấm đúng theo thứ tự mới; có thể bắt đầu bộ câu hỏi khác. Bài ôn tập chỉ phục vụ tự học.
+
+`node scripts/update-heritage-ui.mjs` nhúng các nguồn `web/app.js`, `web/heritage-*.js`, CSS và học liệu vào HTML. Lệnh build tự cập nhật HTML và sao chép ảnh/MP3 vào `public/heritage/`. Chỉnh giao diện video ở `web/story-ai.js` thì chạy `python scripts/update-story-ui.py` trước khi build như trước.

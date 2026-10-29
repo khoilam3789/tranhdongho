@@ -1,0 +1,860 @@
+{
+  "version": 2,
+  "lessons": [
+    {
+      "id": "history",
+      "title": "Làng Mái xưa và nghề tranh Đông Hồ",
+      "eyebrow": "LỊCH SỬ LÀNG NGHỀ",
+      "paragraphs": [
+        "Nhắc đến làng Đông Hồ, xưa nay người ta vẫn nhắc đến với những bức tranh dân gian \"gà lợn nét tươi trong.\" Làng tranh Đông Hồ nay thuộc khu phố Đông Khê, phường Thuận Thành, tỉnh Bắc Ninh (trước đây là xã Song Hồ, huyện Thuận Thành, tỉnh Bắc Ninh), cách trung tâm Hà Nội khoảng 35 km. Trước đây, tên gọi của làng Đông Hồ là làng Mái. Ấy vậy mà người làng Đông Hồ nay vẫn có câu ca với nhau rằng:",
+        "\"Hỡi cô thắt lưng bao xanh",
+        "Có về làng Mái với anh thì về",
+        "Làng Mái có lịch có lịch có lề",
+        "Có ao tắm có nghề làm tranh.\"",
+        "Tranh Đông Hồ ra đời vào khoảng thế kỷ thứ XVI với 7 loại chính: Tranh thờ, tranh chúc tụng, tranh sinh hoạt, tranh lịch sử, tranh truyện, tranh phương ngôn, tranh cảnh vật. Thế kỷ 18, 19 được xem là thời kỳ hưng thịnh nhất của tranh dân gian Việt Nam cùng với sự phát triển của nghề in và khắc gỗ. Tranh thường được bán nhiều nhất vào dịp Tết nguyên đán.",
+        "Nghề làm tranh dân gian Đông Hồ được đưa vào Danh mục di sản văn hóa phi vật thể quốc gia năm 2013. Ngày 9 tháng 12 năm 2025, UNESCO ghi danh nghề này vào Danh sách di sản văn hóa phi vật thể cần bảo vệ khẩn cấp. Di sản được ghi danh là tri thức, kỹ năng và thực hành của nghề làm tranh, không phải riêng từng bức tranh."
+      ],
+      "images": [
+        {
+          "src": "heritage/images/image3.png",
+          "caption": "Không gian làng nghề tranh Đông Hồ trong tư liệu cung cấp."
+        }
+      ],
+      "source": "https://ich.unesco.org/en/USL/craft-of-making-ong-h-folk-woodblock-printings-01737",
+      "audio": "heritage/audio/lesson-history.mp3"
+    },
+    {
+      "id": "materials",
+      "title": "Từ vỏ cây dó đến tờ giấy điệp",
+      "eyebrow": "GIẤY VÀ NGUYÊN LIỆU",
+      "paragraphs": [
+        "Trong các dòng tranh dân gian Việt Nam thì tranh Đông Hồ nổi tiếng hơn cả. Tranh Đông Hồ được yêu thích không chỉ bởi nét vẽ mộc mạc, chân quê mà còn bởi những màu sắc trong tranh được làm hoàn toàn từ tự nhiên.",
+        "Giấy vẽ tranh Đông Hồ là giấy dó - Một chất liệu gắn bó lâu đời với nghề tranh Đông Hồ. Nhờ đức tính cần cù và đôi bàn tay tài hoa, ông cha ta thuở trước đã gây dựng nên biết bao làng nghề truyền thống, trong đó nghề làm giấy dó như một di sản lặng lẽ mà bền bỉ. Đây cũng chính là chất liệu của những tờ tranh dân gian Đông Hồ.",
+        "Giấy dó là loại giấy được làm từ vỏ cây dó. Để làm ra một tờ giấy, người làm phải trải qua rất nhiều quy trình hoàn toàn thủ công và đòi hỏi tính kiên nhẫn. Đây cũng là loại giấy thủ công có lịch sử lâu đời, là nghề truyền thống của một số vùng tại miền Bắc Việt Nam. Có một điều đặc biệt là giấy dó làm tranh Đông Hồ đã được các nghệ sĩ làng Hồ khoác lên một chiếc áo rực rỡ, lấp lánh từ vỏ điệp, nên gọi là giấy điệp.",
+        "\"Tranh Đông Hồ gà lợn nét tươi trong,",
+        "Màu dân tộc sáng bừng trên giấy điệp.\"",
+        "Nhà thơ Hoàng Cầm -",
+        "Ngoài giấy dó thì giấy dướng (làm từ vỏ cây dướng) cũng là một loại giấy truyền thống có đặc tính gần như tương tự so với giấy dó (đanh và chắc hơn giấy dó).",
+        "Giấy dó có đặc tính xốp, nhẹ, bền dai. Do đặc thù là giấy thủ công với các công đoạn giã vỏ dó tỉ mỉ bằng tay, tờ giấy dó được kết cấu nên bởi hàng vạn sợi tơ dó li ti, đan vào nhau đa chiều như mạng nhện. Những sợi giấy li ti đó có tác dụng thấm hút, hút ẩm đặc biệt tốt giúp giấy dó có độ bền lâu lên tới mấy trăm năm."
+      ],
+      "images": [
+        {
+          "src": "heritage/images/image4.jpeg",
+          "caption": "Vỏ cây dó – nguyên liệu làm giấy dó."
+        },
+        {
+          "src": "heritage/images/image5.jpg",
+          "caption": "Vỏ điệp dùng để làm bột điệp."
+        },
+        {
+          "src": "heritage/images/image6.jpg",
+          "caption": "Bề mặt giấy điệp sau khi phủ bột điệp."
+        },
+        {
+          "src": "heritage/images/image7.jpeg",
+          "caption": "Giấy dó truyền thống."
+        }
+      ],
+      "audio": "heritage/audio/lesson-materials.mp3"
+    },
+    {
+      "id": "colors",
+      "title": "Năm sắc màu góp từ thiên nhiên",
+      "eyebrow": "MÀU SẮC TRUYỀN THỐNG",
+      "paragraphs": [
+        "Đoạn 5 màu sắc truyền thống có thông tin: Tranh Đông Hồ gây ấn tượng bởi nét vẽ mộc mạc, đậm chất làng quê Việt Nam và nổi bật với 5 sắc màu truyền thống: trắng, đen, xanh, vàng và đỏ. Điểm độc đáo nằm ở chỗ toàn bộ màu vẽ đều được làm từ nguyên liệu tự nhiên: trắng từ con điệp, vàng từ hoa hòe, xanh từ lá chàm, đỏ từ sỏi son, còn đen từ than lá tre. Những sắc màu ấy được góp từ mọi miền Tổ quốc — từ biển cả đến núi rừng, trung du và đồng bằng rồi hội tụ lại trên từng bức tranh.",
+        "Được lấy hoàn toàn từ thiên nhiên nên màu sắc của tranh Đông Hồ tuy đơn giản nhưng lại rất đặc biệt, không nhầm lẫn với bất kỳ dòng tranh nào khác. Chính nét độc đáo đó đã tạo nên giá trị riêng biệt cho dòng tranh này.",
+        "Để tạo nên các gam màu tự nhiên ấy, người nghệ nhân phải bỏ ra rất nhiều công phu và kinh nghiệm.",
+        "Trong cách làm được mô tả ở học liệu, lá tre khô được đốt thành than rồi ngâm trong chum một thời gian dài để tạo màu đen. Quy trình cụ thể có thể khác nhau giữa các gia đình nghệ nhân.",
+        "Màu đỏ – thu nhặt sỏi son có màu đỏ trong tự nhiên, nghiền mịn rồi lọc lấy bột màu. Sau đó, bột màu được pha với chất kết dính để sử dụng khi in tranh.",
+        "Màu vàng – từ hoa hòe được thu hái, phơi hoặc sấy khô rồi đun lấy nước màu. Dịch màu được xử lí và pha chế để tạo sắc vàng dùng trong tranh.",
+        "Màu xanh – từ lá chàm được xử lí để thu chất màu xanh, sau đó pha chế thành màu in tranh. Tùy sắc độ, nghệ nhân còn có thể sử dụng những nguyên liệu tự nhiên khác để tạo màu xanh.",
+        "Màu trắng – từ vỏ điệp được làm sạch, nghiền thành bột mịn rồi trộn với hồ. Hỗn hợp này được quét lên giấy dó tạo thành giấy điệp có nền trắng óng ánh đặc trưng.",
+        "Phần em có biết thì có thêm: Mỗi gia đình lại có bí quyết pha chế riêng, góp phần tạo nên sự phong phú cho tranh Đông Hồ. Dù màu hóa học ngày nay phổ biến, nhiều hộ làm tranh vẫn giữ thói quen dùng màu tự nhiên như một cách gìn giữ vẻ đẹp mộc mạc của dòng tranh cổ truyền."
+      ],
+      "images": [
+        {
+          "src": "heritage/images/image8.jpeg",
+          "caption": "Các nguyên liệu và bột màu tự nhiên."
+        },
+        {
+          "src": "heritage/images/image9.jpeg",
+          "caption": "Nghiền và pha màu đỏ từ sỏi son."
+        },
+        {
+          "src": "heritage/images/image10.jpeg",
+          "caption": "Hoa hòe tạo sắc vàng."
+        },
+        {
+          "src": "heritage/images/image11.jpeg",
+          "caption": "Lá chàm tạo màu xanh."
+        },
+        {
+          "src": "heritage/images/image12.jpeg",
+          "caption": "Nghiền vỏ điệp để tạo bột điệp."
+        }
+      ],
+      "audio": "heritage/audio/lesson-colors.mp3"
+    },
+    {
+      "id": "process",
+      "title": "Một bức tranh đi qua nhiều lần in",
+      "eyebrow": "NGHỀ IN MỘC BẢN",
+      "paragraphs": [
+        "Nghệ nhân chuẩn bị hình mẫu rồi khắc các ván nét và ván màu tương ứng. Mỗi bản khắc góp một phần vào hình ảnh hoàn chỉnh.",
+        "Giấy dó được phủ hỗn hợp bột điệp và hồ để thành giấy điệp. Những màu có nguồn gốc tự nhiên được xử lý và pha với chất kết dính phù hợp.",
+        "Màu được đưa đều lên mặt ván. Nghệ nhân đặt giấy, căn chỉnh và miết hoặc ép để chuyển màu từ ván sang giấy.",
+        "Các lớp màu được in lần lượt bằng các ván tương ứng. Việc căn chỉnh cần cẩn thận để mảng màu và nét khớp nhau; tranh được để khô và hoàn thiện.",
+        "Tri thức về chọn gỗ, khắc ván, làm giấy, pha màu và thao tác in được lưu giữ và truyền dạy qua nhiều thế hệ nghệ nhân."
+      ],
+      "images": [
+        {
+          "src": "heritage/images/image8.jpeg",
+          "caption": "Vật liệu tự nhiên chuẩn bị cho việc in tranh."
+        }
+      ],
+      "audio": "heritage/audio/lesson-process.mp3"
+    }
+  ],
+  "paintings": {
+    "teacher": {
+      "name": "Thầy đồ cóc",
+      "image": "heritage/images/image13.png",
+      "summary": "Ý nghĩa bức tranh: : Ca ngợi đức tính ham học và tôn sư trọng đạo của người Việt Nam . Chữ trên tranh: 老 蛙 講 讀 - “LÃO OA GIẢNG ĐỘC”, nghĩa là \"Thầy giáo Cóc giảng bài\". Ý nghĩa từng đối tượng: Bức tranh gồm 12 con cóc trong khung cảnh lớp học sinh động.",
+      "paragraphs": [
+        "Ý nghĩa bức tranh: : Ca ngợi đức tính ham học và tôn sư trọng đạo của người Việt Nam . Chữ trên tranh: 老 蛙 講 讀 - “LÃO OA GIẢNG ĐỘC”, nghĩa là \"Thầy giáo Cóc giảng bài\".",
+        "Ý nghĩa từng đối tượng: Bức tranh gồm 12 con cóc trong khung cảnh lớp học sinh động.",
+        "Cây tùng tượng trưng cho sự hiền triết của người thầy.",
+        "“Thầy đồ Cóc” có thân hình to lớn hơn các học trò, đang ngồi trên sập gụ với tư thế rất oai nghiêm. Một tay chống lên sập, một tay chỉ vào chồng sách đặt bên. Trước mặt là án thư, có các đồ vật giảng dạy và sinh hoạt của thầy: ống bút, nghiên mực, đĩa đèn dầu, bộ ấm chén, bình điếu thuốc lào với chiếc cần hút cong vút",
+        "Bên trái “Thầy đồ Cóc\" là một học trò Cóc , tay xách ấm nước, chuẩn bị châm nước cho thầy, khúm núm sẵn sàng phục vụ châm nước cho Thầy.",
+        "Kế bên là một trò Nhái (lớp trưởng) hai tay cầm một cuộn thanh tre với những câu chữ, dùng như sách vở ngày nay, đang giúp một trò khác học bài.",
+        "Bên cạnh “lớp trưởng” - bên phải Thầy Đồ Cóc , một học trò cóc đang khép nép ngước nhìn, có vẻ như không thuộc bài và đang ôm vở trả bài.",
+        "Một học trò cóc khác ngồi học bài trước mặt là những thanh tre được kết nối lại với nhau, như những cuốn sách thời xưa.",
+        "Trước mặt thầy là một cảnh tranh luận thú vị giữa các học trò cóc : Một học trò cóc to lớn hơn những bạn khác (chỉ thua độ lớn của thầy) đang chứng kiến cảnh hai bạn cóc đánh đòn một học trò khác. Một bạn cóc ngồi lên lưng khống chế bạn bị phạt, trong khi một bạn khác nắm mông và giơ roi lên chuẩn bị giáng xuống. Những cảnh tượng như thầy dùng roi vọt để răn dạy trẻ em là một phần phản ánh những phương pháp dạy học khắc nghiệt và cứng nhắc của thời kỳ đó.",
+        "Bên cạnh sập gụ và án thư, hai chú cóc nhỏ xuất hiện như những học trò ham học, lăng xăng nhảy nhót, mắt chăm chú nhìn các anh chị cóc “đàn anh” đang sinh hoạt trong lớp học."
+      ],
+      "symbols": [
+        {
+          "name": "Cây tùng",
+          "desc": "Cây tùng tượng trưng cho sự hiền triết của người thầy."
+        },
+        {
+          "name": "Thầy đồ cóc và án thư",
+          "desc": "“Thầy đồ Cóc” có thân hình to lớn hơn các học trò, đang ngồi trên sập gụ với tư thế rất oai nghiêm. Một tay chống lên sập, một tay chỉ vào chồng sách đặt bên. Trước mặt là án thư, có các đồ vật giảng dạy và sinh hoạt của thầy: ống bút, nghiên mực, đĩa đèn dầu, bộ ấm chén, bình điếu thuốc lào với chiếc cần hút cong vút",
+          "img": "heritage/images/image14.png"
+        },
+        {
+          "name": "Học trò xách ấm nước",
+          "desc": "Bên trái “Thầy đồ Cóc\" là một học trò Cóc , tay xách ấm nước, chuẩn bị châm nước cho thầy, khúm núm sẵn sàng phục vụ châm nước cho Thầy.",
+          "img": "heritage/images/image15.png"
+        },
+        {
+          "name": "Lớp trưởng và bạn học",
+          "desc": "Kế bên là một trò Nhái (lớp trưởng) hai tay cầm một cuộn thanh tre với những câu chữ, dùng như sách vở ngày nay, đang giúp một trò khác học bài.",
+          "img": "heritage/images/image17.png"
+        },
+        {
+          "name": "Học trò trả bài và ngồi học",
+          "desc": "Bên cạnh “lớp trưởng” - bên phải Thầy Đồ Cóc , một học trò cóc đang khép nép ngước nhìn, có vẻ như không thuộc bài và đang ôm vở trả bài. Một học trò cóc khác ngồi học bài trước mặt là những thanh tre được kết nối lại với nhau, như những cuốn sách thời xưa."
+        },
+        {
+          "name": "Cảnh phạt học trò",
+          "desc": "Trước mặt thầy là một cảnh tranh luận thú vị giữa các học trò cóc : Một học trò cóc to lớn hơn những bạn khác (chỉ thua độ lớn của thầy) đang chứng kiến cảnh hai bạn cóc đánh đòn một học trò khác. Một bạn cóc ngồi lên lưng khống chế bạn bị phạt, trong khi một bạn khác nắm mông và giơ roi lên chuẩn bị giáng xuống. Những cảnh tượng như thầy dùng roi vọt để răn dạy trẻ em là một phần phản ánh những phương pháp dạy học khắc nghiệt và cứng nhắc của thời kỳ đó.",
+          "img": "heritage/images/image18.png"
+        },
+        {
+          "name": "Những học trò nhỏ",
+          "desc": "Bên cạnh sập gụ và án thư, hai chú cóc nhỏ xuất hiện như những học trò ham học, lăng xăng nhảy nhót, mắt chăm chú nhìn các anh chị cóc “đàn anh” đang sinh hoạt trong lớp học.",
+          "img": "heritage/images/image19.png"
+        }
+      ],
+      "audio": "heritage/audio/painting-teacher.mp3"
+    },
+    "scholar": {
+      "name": "Hiếu học – Chăn trâu đọc sách",
+      "image": "heritage/images/image20.jpeg",
+      "summary": "Bức tranh Đông Hồ “Hiếu Học – Chăn Trâu Đọc Sách” khắc họa hình ảnh một em bé vừa chăn trâu vừa chăm chú học bài, thể hiện tinh thần hiếu học, sự siêng năng và khát vọng vươn lên trong học tập. Tranh là lời ca ngợi tinh thần vượt khó, khuyến khích con trẻ dù trong hoàn cảnh nào cũng phải nỗ lực học hành để làm rạng danh gia đình, dòng họ. Trên tranh có ba chữ Hán Nôm “如掛角”, nghĩa là “Như quải giác” – ví việc treo sách lên sừng trâu để không ngừng theo đuổi con đường học vấn",
+      "paragraphs": [
+        "Bức tranh Đông Hồ “Hiếu Học – Chăn Trâu Đọc Sách” khắc họa hình ảnh một em bé vừa chăn trâu vừa chăm chú học bài, thể hiện tinh thần hiếu học, sự siêng năng và khát vọng vươn lên trong học tập.",
+        "Tranh là lời ca ngợi tinh thần vượt khó, khuyến khích con trẻ dù trong hoàn cảnh nào cũng phải nỗ lực học hành để làm rạng danh gia đình, dòng họ.",
+        "Trên tranh có ba chữ Hán Nôm “如掛角”, nghĩa là “Như quải giác” – ví việc treo sách lên sừng trâu để không ngừng theo đuổi con đường học vấn",
+        "Cậu bé chăn trâu (mục đồng) : Ngồi trên lưng trâu thảnh thơi nhưng tay vẫn nâng niu cuốn sách biểu tượng cho tinh thần hiếu học vượt lên hoàn cảnh khó khăn, lao động vất vả nhưng không quên tri thức. Dù ở nông thôn nghèo khó, việc học vẫn luôn được xem trọng như gốc rễ của con người",
+        "Con trâu hiền lành, vững chãi cõng cậu bé và chồng sách trên lưng. Trâu là hiện thân của sự cần cù, chịu thương chịu khó, là \"đầu cơ nghiệp\" của nhà nông. Trâu cõng sách ý chỉ sự hậu thuẫn vững chắc cho con đường tiến thân qua học hành",
+        "Cuốn sách mở ra trước ngực: Thể hiện khát khao vươn tới ánh sáng tri thức.",
+        "Trên sách đề dòng chữ \"Hoành ngưu bối, tín khẩu suy\" (Sách để ngang lưng trâu, miệng huýt sáo học bài), phản ánh sự say mê học tập mọi lúc, mọi nơi của người xưa"
+      ],
+      "symbols": [
+        {
+          "name": "Cậu bé mục đồng",
+          "desc": "Cậu bé chăn trâu (mục đồng) : Ngồi trên lưng trâu thảnh thơi nhưng tay vẫn nâng niu cuốn sách biểu tượng cho tinh thần hiếu học vượt lên hoàn cảnh khó khăn, lao động vất vả nhưng không quên tri thức. Dù ở nông thôn nghèo khó, việc học vẫn luôn được xem trọng như gốc rễ của con người",
+          "img": "heritage/images/image21.png"
+        },
+        {
+          "name": "Con trâu",
+          "desc": "Con trâu hiền lành, vững chãi cõng cậu bé và chồng sách trên lưng. Trâu là hiện thân của sự cần cù, chịu thương chịu khó, là \"đầu cơ nghiệp\" của nhà nông. Trâu cõng sách ý chỉ sự hậu thuẫn vững chắc cho con đường tiến thân qua học hành",
+          "img": "heritage/images/image22.png"
+        },
+        {
+          "name": "Cuốn sách và chữ trên tranh",
+          "desc": "Trên tranh có ba chữ Hán Nôm “如掛角”, nghĩa là “Như quải giác” – ví việc treo sách lên sừng trâu để không ngừng theo đuổi con đường học vấn Cuốn sách mở ra trước ngực: Thể hiện khát khao vươn tới ánh sáng tri thức. Trên sách đề dòng chữ \"Hoành ngưu bối, tín khẩu suy\" (Sách để ngang lưng trâu, miệng huýt sáo học bài), phản ánh sự say mê học tập mọi lúc, mọi nơi của người xưa"
+        }
+      ],
+      "audio": "heritage/audio/painting-scholar.mp3"
+    },
+    "procession": {
+      "name": "Vinh quy bái tổ",
+      "image": "heritage/images/image23.jpg",
+      "summary": "Được phản ánh qua từng nét vẽ, tranh Vinh Quy Bái Tổ tái hiện hình ảnh người đỗ đạt trở về với sự tôn vinh, mang đậm nét văn hóa làng quê Việt , khoảnh khắc long trọng của người đỗ đạt trở về quê hương, nhận được sự chào đón nồng hậu từ gia đình và làng xóm. Đỗ Trạng Nguyên không chỉ là niềm vinh dự cho vị tân khoa, cho cha mẹ, họ hàng, làng xóm, mà còn là dịp để bày tỏ lòng biết ơn với tổ tiên, đấng sinh thành và thầy dạy theo đúng đạo lý Việt Nam: Công cha, nghĩa mẹ, ơn thầy",
+      "paragraphs": [
+        "Được phản ánh qua từng nét vẽ, tranh Vinh Quy Bái Tổ tái hiện hình ảnh người đỗ đạt trở về với sự tôn vinh, mang đậm nét văn hóa làng quê Việt , khoảnh khắc long trọng của người đỗ đạt trở về quê hương, nhận được sự chào đón nồng hậu từ gia đình và làng xóm.",
+        "Đỗ Trạng Nguyên không chỉ là niềm vinh dự cho vị tân khoa, cho cha mẹ, họ hàng, làng xóm, mà còn là dịp để bày tỏ lòng biết ơn với tổ tiên, đấng sinh thành và thầy dạy theo đúng đạo lý Việt Nam: Công cha, nghĩa mẹ, ơn thầy",
+        "Trạng nguyên (Vị tân khoa) : Là hình ảnh trung tâm, đội mũ mão, mặc áo bào, cưỡi ngựa trắng uy nghi, che lọng tía tượng trưng cho khát vọng học hành đỗ đạt, sự thành đạt và trí tuệ cao quý, thể hiện đạo lý “Uống nước nhớ nguồn” – dù công danh hiển hách vẫn không quên cội nguồn.",
+        "Hình ảnh con ngựa : Ngựa với yên gấm đỏ thắm, bước đi oai phong giữa ánh nắng vàng biểu tượng cho vinh hiển, trí tuệ và lòng tự hào quê hương, mang ý nghĩa phong thuỷ thu hút tài lộc may mắn.",
+        "Hình ảnh cờ quạt, chiêng trống, quân lính rước kiệu tái hiện lại đoàn rước linh đình, trang trọng, thể hiện sự hân hoan của cả làng. Cờ lọng tía tượng trưng cho quyền lực và địa vị xã hội, âm thanh rộn ràng tạo nên không khí lễ hội, niềm vui chung của cộng đồng."
+      ],
+      "symbols": [
+        {
+          "name": "Vị tân khoa",
+          "desc": "Trạng nguyên (Vị tân khoa) : Là hình ảnh trung tâm, đội mũ mão, mặc áo bào, cưỡi ngựa trắng uy nghi, che lọng tía tượng trưng cho khát vọng học hành đỗ đạt, sự thành đạt và trí tuệ cao quý, thể hiện đạo lý “Uống nước nhớ nguồn” – dù công danh hiển hách vẫn không quên cội nguồn.",
+          "img": "heritage/images/image24.png"
+        },
+        {
+          "name": "Con ngựa",
+          "desc": "Hình ảnh con ngựa : Ngựa với yên gấm đỏ thắm, bước đi oai phong giữa ánh nắng vàng biểu tượng cho vinh hiển, trí tuệ và lòng tự hào quê hương, mang ý nghĩa phong thuỷ thu hút tài lộc may mắn.",
+          "img": "heritage/images/image25.png"
+        },
+        {
+          "name": "Đoàn rước và cờ lọng",
+          "desc": "Hình ảnh cờ quạt, chiêng trống, quân lính rước kiệu tái hiện lại đoàn rước linh đình, trang trọng, thể hiện sự hân hoan của cả làng. Cờ lọng tía tượng trưng cho quyền lực và địa vị xã hội, âm thanh rộn ràng tạo nên không khí lễ hội, niềm vui chung của cộng đồng."
+        }
+      ],
+      "audio": "heritage/audio/painting-procession.mp3"
+    },
+    "flock": {
+      "name": "Đàn gà mẹ con",
+      "image": "heritage/images/image26.png",
+      "summary": "Tranh Đông Hồ đàn gà mẹ con được xem là một biểu tượng của văn hóa dân gian Việt Nam, phản ánh tình mẹ hiếu thảo, sự quan tâm chăm sóc đến con cái và tình yêu gia đình. Nó cũng mang ý nghĩa là lời chúc phúc, tài lộc và sinh sản cho gia đình. Nhìn vào bức tranh, chúng ta có thể thấy sự tươi vui và hạnh phúc của đàn gà con khi được bên cạnh mẹ, được yên ổn, bình an Ngoài ý nghĩa tượng trưng cho sự giàu có, no đủ, bức tranh còn toát ra một “tình mẫu tử” thiêng liêng, một sự đoàn tụ sum vầy của gia đình gà. Trong bức tranh trên, dù ở tư thế nào thì gà con đều hướng về phía gà mẹ thể hiện sự gắn bó, nương tựa, biết ơn của con cái với đấng sinh thành. Đây là biểu tượng cho sự hiếu thảo, là nền tảng đạo đức quan trọng trong văn hoá người Việt. Sự quây quần bên mẹ cũng phản ánh khát vọng về một gia đình sum vầy, hạnh phúc, nơi con cái luôn hướng về nguồn cội, biết trân trọng công ơn dưỡng dục – một giá trị đạo lý sâu sắc của dân tộc được gửi gắm qua bức tranh dân gian này.",
+      "paragraphs": [
+        "Tranh Đông Hồ đàn gà mẹ con được xem là một biểu tượng của văn hóa dân gian Việt Nam, phản ánh tình mẫu tử, lòng hiếu thảo, sự quan tâm chăm sóc đến con cái và tình yêu gia đình. Nó cũng mang ý nghĩa là lời chúc phúc, tài lộc và sinh sản cho gia đình.",
+        "Nhìn vào bức tranh, chúng ta có thể thấy sự tươi vui và hạnh phúc của đàn gà con khi được bên cạnh mẹ, được yên ổn, bình an",
+        "Trên tranh gà mẹ ngậm trong mỏ một con mồi, dáng vẻ hiền từ, chăm chút các con.",
+        "Mười chú gà con ( con số đỉnh điểm của sự tròn đầy trong văn hoá người Việt, tượng trưng cho hạnh phúc viên mãn, con đàn cháu đống, gia đình sum vầy) đứng quanh gà mẹ mỗi con mỗi vẻ khác nhau: con đang rỉa lông , con đang đùa chạy, con nấp dưới bụng mẹ… nhưng dường như tất cả đang hướng về một phía là miếng mồi của gà mẹ vừa kiếm được. Hai chân gà mẹ giang ra chịu đựng sức nặng của hai chú gà con đang đứng trên lưng, đồng thời cũng như chuẩn bị giữ thế trước sự giành mồi của các con sắp bổ nhào tới.",
+        "Ngoài ý nghĩa tượng trưng cho sự giàu có, no đủ, bức tranh còn toát ra một “tình mẫu tử” thiêng liêng, một sự đoàn tụ sum vầy của gia đình gà. Trong bức tranh trên, dù ở tư thế nào thì gà con đều hướng về phía gà mẹ thể hiện sự gắn bó, nương tựa, biết ơn của con cái với đấng sinh thành. Đây là biểu tượng cho sự hiếu thảo, là nền tảng đạo đức quan trọng trong văn hoá người Việt. Sự quây quần bên mẹ cũng phản ánh khát vọng về một gia đình sum vầy, hạnh phúc, nơi con cái luôn hướng về nguồn cội, biết trân trọng công ơn dưỡng dục – một giá trị đạo lý sâu sắc của dân tộc được gửi gắm qua bức tranh dân gian này."
+      ],
+      "symbols": [
+        {
+          "name": "Gà mẹ và miếng mồi",
+          "desc": "Trên tranh gà mẹ ngậm trong mỏ một con ong đang hiền từ, chăm chút các con.",
+          "img": "heritage/images/image27.png"
+        },
+        {
+          "name": "Đàn gà con quây quần",
+          "desc": "Mười chú gà con ( con số đỉnh điểm của sự tròn đầy trong văn hoá người Việt, tượng trưng cho hạnh phúc viên mãn, còn đàn cháu đống, gia đình sum vầy) đứng quanh gà mẹ mỗi con mỗi vẻ khác nhau: con đang rỉa lông , con đang đùa chạy, con nấp dưới bụng mẹ… nhưng dường như tất cả đang hướng về một phía là miếng mồi của gà mẹ vừa kiếm được. Hai chân gà mẹ giang ra chịu đựng sức nặng của hai chú gà con đang đứng trên lưng, đồng thời cũng như chuẩn bị giữ thế trước sự giành mồi của các con sắp bổ nhào tới."
+        },
+        {
+          "name": "Tình mẫu tử và lòng biết ơn",
+          "desc": "Ngoài ý nghĩa tượng trưng cho sự giàu có, no đủ, bức tranh còn toát ra một “tình mẫu tử” thiêng liêng, một sự đoàn tụ sum vầy của gia đình gà. Trong bức tranh trên, dù ở tư thế nào thì gà con đều hướng về phía gà mẹ thể hiện sự gắn bó, nương tựa, biết ơn của con cái với đấng sinh thành. Đây là biểu tượng cho sự hiếu thảo, là nền tảng đạo đức quan trọng trong văn hoá người Việt. Sự quây quần bên mẹ cũng phản ánh khát vọng về một gia đình sum vầy, hạnh phúc, nơi con cái luôn hướng về nguồn cội, biết trân trọng công ơn dưỡng dục – một giá trị đạo lý sâu sắc của dân tộc được gửi gắm qua bức tranh dân gian này."
+        }
+      ],
+      "audio": "heritage/audio/painting-flock.mp3"
+    },
+    "rooster": {
+      "name": "Gà hoa hồng",
+      "image": "heritage/images/image28.jpg",
+      "summary": "Trong quan niệm của người Việt, gà trống là biểu tượng của ngũ đức: văn, vũ, dũng, nhân, tín. Đó là những đức tính tốt của người nam giới, đức tính cần có của một bậc dũng sĩ. Gà gáy báo hiệu một ngày mới, gà đánh thức mặt trời chiếu sáng cho đủ đầy ánh nắng cả năm. Với người nông dân, gà không chỉ là vật nuôi thân thuộc, nó còn là chiếc đồng hồ gọi cả làng dậy ra đồng mỗi sớm mai. Chính vì thế gà trống trở thành con vật gắn bó, gần gũi trong tâm linh của nhà nông từ ngàn xưa. Thậm chí con gà đã là một mã văn hoá đi liền với tín ngưỡng tôn sùng mặt trời của nghề trồng lúa nước Khi kết hợp hình ảnh gà trống và hoa hồng mang ý nghĩa dũng mãnh oai phong của gà trống, mềm mại nhẹ nhàng mang tên của loài hoa tình yêu. Biểu tượng cho tình yêu, thịnh vượng phú quý và sung túc trong năm mới. Nó chính là tính chất âm dương ngũ hành được thể hiện qua bức tranh.",
+      "paragraphs": [
+        "Trong quan niệm của người Việt, gà trống là biểu tượng của ngũ đức: văn, vũ, dũng, nhân, tín.",
+        "Văn thể hiện ở chiếc mào đỏ giống mũ cánh chuồn. (Chữ Hán mào gà gọi là quan, đồng âm với quan (mũ) và quan (chức).",
+        "Vũ thể hiện ở cựa sắc nhọn như gươm – Cựa chính là vũ khí lợi hại nhất của một chú gà trưởng thành.",
+        "Dũng thể hiện ở sự dũng cảm, kiên trì và bền bỉ khi đối diện thử thách.",
+        "Nhân thể hiện ở thói quen chia mồi cho gà con.",
+        "Tín thể hiện ở tiếng gáy đúng giờ.",
+        "Đó là những đức tính tốt của người nam giới, đức tính cần có của một bậc dũng sĩ. Gà gáy báo hiệu một ngày mới, gà đánh thức mặt trời chiếu sáng cho đủ đầy ánh nắng cả năm.",
+        "Với người nông dân, gà không chỉ là vật nuôi thân thuộc, nó còn là chiếc đồng hồ gọi cả làng dậy ra đồng mỗi sớm mai. Chính vì thế gà trống trở thành con vật gắn bó, gần gũi trong tâm linh của nhà nông từ ngàn xưa. Thậm chí con gà đã là một mã văn hoá đi liền với tín ngưỡng tôn sùng mặt trời của nghề trồng lúa nước",
+        "Hình ảnh chú gà trống trong tư thế cất tiếng gáy. Đây là thế oai phong nhất của chú gà thể hiện “bản lĩnh” như một người đàn ông trưởng thành. Chân phải bước lên trên mỏm đá, chân trái vươn dài, toàn thân vươn ra hướng về phía mặt trời để cất tiếng gáy. Chân bên trái của chú gà trống có cựa dài sắc nhọn bám chắc vào mỏm đá. Bộ lông đủ màu sặc sỡ. Thân người chắc nịch, chiếc mào đỏ đẹp và bộ lông đuôi như những rẻ quạt nan rất đẹp. Chứng tỏ đây là một chú gà trống dũng mạnh, đang ở thế sinh lực căng trào. Ở bên dưới mỏm đá mọc lên cây hoa hồng. Hoa Hồng là biểu tượng của tình yêu của phú quý hạnh phúc trong năm mới.",
+        "Khi kết hợp hình ảnh gà trống và hoa hồng mang ý nghĩa dũng mãnh oai phong của gà trống, mềm mại nhẹ nhàng mang tên của loài hoa tình yêu. Biểu tượng cho tình yêu, thịnh vượng phú quý và sung túc trong năm mới. Nó chính là tính chất âm dương ngũ hành được thể hiện qua bức tranh.",
+        "Ngoài ra, hoa hồng ở đây còn có ý nghĩa là những gì tinh túy nhất giúp cho gà trống được thể hiện sự oai phong dũng mãnh của mình khi chuẩn bị cất tiếng gáy. Ngụ ý trong cuộc sống bên cạnh sự thành công của một người đàn ông trưởng thành bao giờ cũng có những cánh hồng làm hậu phương vững chắc. Cánh hồng ở đây là người mẹ, người vợ, người yêu thương luôn mong cầu cho người con, người chồng của mình được tỏa sáng nhất."
+      ],
+      "symbols": [
+        {
+          "name": "Ngũ đức của gà trống",
+          "desc": "Trong quan niệm của người Việt, gà trống là biểu tượng của ngũ đức: văn, vũ, dũng, nhân, tín. Văn thể hiện ở chiếc mào đỏ giống mũ cánh chuồn. (Chữ Hán mào gà gọi là quan, đồng âm với quan (mũ) và quan (chức). Vũ thể hiện ở cựa sắc nhọn như gươm – Cựa chính là vũ khí lợi hại nhất của một chú gà trưởng thành. Dũng thể hiện ở sự đấu đá không kiên trì, bền bỉ quyết phân thắng bại. Nhân thể hiện ở thói quen chia mồi cho gà con. Tín thể hiện ở tiếng gáy đúng giờ."
+        },
+        {
+          "name": "Dáng gà trống và mỏm đá",
+          "desc": "Hình ảnh chú gà trống trong tư thế cất tiếng gáy. Đây là thế oai phong nhất của chú gà thể hiện “bản lĩnh” như một người đàn ông trưởng thành. Chân phải bước lên trên mỏm đá, chân trái vươn dài, toàn thân vươn ra hướng về phía mặt trời để cất tiếng gáy. Chân bên trái của chú gà trống có cựa dài sắc nhọn bám chắc vào mỏm đá. Bộ lông đủ màu sặc sỡ. Thân người chắc nịch, chiếc mào đỏ đẹp và bộ lông đuôi như những rẻ quạt nan rất đẹp. Chứng tỏ đây là một chú gà trống dũng mạnh, đang ở thế sinh lực căng trào. Ở bên dưới mỏm đá mọc lên cây hoa hồng. Hoa Hồng là biểu tượng của tình yêu của phú quý hạnh phúc trong năm mới.",
+          "img": "heritage/images/image29.png"
+        },
+        {
+          "name": "Hoa hồng và ý nghĩa kết hợp",
+          "desc": "Khi kết hợp hình ảnh gà trống và hoa hồng mang ý nghĩa dũng mãnh oai phong của gà trống, mềm mại nhẹ nhàng mang tên của loài hoa tình yêu. Biểu tượng cho tình yêu, thịnh vượng phú quý và sung túc trong năm mới. Nó chính là tính chất âm dương ngũ hành được thể hiện qua bức tranh. Ngoài ra, hoa hồng ở đây còn có ý nghĩa là những gì tinh túy nhất giúp cho gà trống được thể hiện sự oai phong dũng mãnh của mình khi chuẩn bị cất tiếng gáy. Ngụ ý trong cuộc sống bên cạnh sự thành công của một người đàn ông trưởng thành bao giờ cũng có những cánh hồng làm hậu phương vững chắc. Cánh hồng ở đây là người mẹ, người vợ, người yêu thương luôn mong cầu cho người con, người chồng của mình được tỏa sáng nhất."
+        }
+      ],
+      "audio": "heritage/audio/painting-rooster.mp3"
+    },
+    "roosterfamily": {
+      "name": "Thư hùng – Gia đình gà",
+      "image": "heritage/images/image30.png",
+      "summary": "Tranh miêu tả một gia đình gà bao gồm gà trống, gà mái và đàn con. Trên bức tranh, dòng chữ nôm \"lắm con nhiều cháu, giống cánh giống lông\" (lấy ý từ câu \"Con nhà tông không giống lông cũng giống cánh\") thể hiện sự đoàn kết, liên kết và sự ấm áp trong gia đình. Bức tranh gợi lên không khí hạnh phúc, đầm ấm trong gia đình, một gia đình sum vầy, ấm no, hạnh phúc bên nhau.",
+      "paragraphs": [
+        "Tranh miêu tả một gia đình gà bao gồm gà trống, gà mái và đàn con. Trên bức tranh, dòng chữ nôm \"lắm con nhiều cháu, giống cánh giống lông\" (lấy ý từ câu \"Con nhà tông không giống lông cũng giống cánh\") thể hiện sự đoàn kết, liên kết và sự ấm áp trong gia đình.",
+        "Gà mái có bố cục theo đường xoắn ốc, tạo nên sự mềm mại, thân thiện.",
+        "Gà trống được đặt trong một hình thang, với đáy lớn nằm trên, tạo nên tư thế chủ gia đình, che chở cho gà mái và đàn con.",
+        "Bức tranh gợi lên không khí hạnh phúc, đầm ấm trong gia đình, một gia đình sum vầy, ấm no, hạnh phúc bên nhau."
+      ],
+      "symbols": [
+        {
+          "name": "Gà mái",
+          "desc": "Gà mái có bố cục theo đường xoắn ốc, tạo nên sự mềm mại, thân thiện."
+        },
+        {
+          "name": "Gà trống",
+          "desc": "Gà trống được đặt trong một hình thang, với đáy lớn nằm trên, tạo nên tư thế chủ gia đình, che chở cho gà mái và đàn con."
+        },
+        {
+          "name": "Đàn con và sự sum vầy",
+          "desc": "Tranh miêu tả một gia đình gà bao gồm gà trống, gà mái và đàn con. Trên bức tranh, dòng chữ nôm \"lắm con nhiều cháu, giống cánh giống lông\" (lấy ý từ câu \"Con nhà tông không giống lông cũng giống cánh\") thể hiện sự đoàn kết, liên kết và sự ấm áp trong gia đình. Bức tranh gợi lên không khí hạnh phúc, đầm ấm trong gia đình, một gia đình sum vầy, ấm no, hạnh phúc bên nhau."
+        }
+      ],
+      "audio": "heritage/audio/painting-roosterfamily.mp3"
+    }
+  },
+  "questions": [
+    {
+      "title": "Tranh dân gian Đông Hồ có nguồn gốc từ tỉnh nào?",
+      "answers": [
+        "Bắc Ninh",
+        "Bắc Giang",
+        "Hà Nội",
+        "Hải Dương"
+      ],
+      "id": "learning-1",
+      "correct": 0,
+      "why": "Kiến thức cần nhớ: Bắc Ninh."
+    },
+    {
+      "title": "Làng tranh Đông Hồ thuộc địa bàn nào?",
+      "answers": [
+        "Phường Đình Bảng",
+        "Phường Đồng Kỵ",
+        "Phường Thuận Thành",
+        "Phường Phù Khê"
+      ],
+      "id": "learning-2",
+      "correct": 2,
+      "why": "Kiến thức cần nhớ: Phường Thuận Thành."
+    },
+    {
+      "title": "Tranh Đông Hồ thuộc loại hình nghệ thuật nào?",
+      "answers": [
+        "Tranh sơn dầu",
+        "Tranh dân gian",
+        "Tranh lụa hiện đại",
+        "Tranh sơn mài"
+      ],
+      "id": "learning-3",
+      "correct": 1,
+      "why": "Kiến thức cần nhớ: Tranh dân gian."
+    },
+    {
+      "title": "Tranh Đông Hồ truyền thống thường được làm bằng phương pháp nào?",
+      "answers": [
+        "Vẽ bằng bút lông từng bức",
+        "In từ ván khắc gỗ",
+        "In bằng máy in màu hiện đại",
+        "Thêu trên vải"
+      ],
+      "id": "learning-4",
+      "correct": 1,
+      "why": "Kiến thức cần nhớ: In từ ván khắc gỗ."
+    },
+    {
+      "title": "Tranh Đông Hồ xưa thường được người dân mua nhiều vào dịp nào?",
+      "answers": [
+        "Tết Nguyên đán",
+        "Ngày khai giảng",
+        "Ngày Quốc tế Thiếu nhi",
+        "Ngày sinh nhật"
+      ],
+      "id": "learning-5",
+      "correct": 0,
+      "why": "Kiến thức cần nhớ: Tết Nguyên đán."
+    },
+    {
+      "title": "Giấy thường dùng để in tranh Đông Hồ có tên là gì?",
+      "answers": [
+        "Giấy dó phủ điệp",
+        "Giấy bạc",
+        "Giấy bóng kính",
+        "Giấy than"
+      ],
+      "id": "learning-6",
+      "correct": 0,
+      "why": "Kiến thức cần nhớ: Giấy dó phủ điệp."
+    },
+    {
+      "title": "Chất liệu nào thường được dùng để tạo màu cho tranh Đông Hồ truyền thống?",
+      "answers": [
+        "Chủ yếu là màu tổng hợp công nghiệp",
+        "Màu từ nguyên liệu tự nhiên",
+        "Màu nước pha sẵn",
+        "Mực in laser"
+      ],
+      "id": "learning-7",
+      "correct": 1,
+      "why": "Kiến thức cần nhớ: Màu từ nguyên liệu tự nhiên."
+    },
+    {
+      "title": "Màu trắng trong tranh Đông Hồ truyền thống thường được tạo từ nguyên liệu nào?",
+      "answers": [
+        "Than tre",
+        "Hoa hòe",
+        "Vỏ điệp nghiền",
+        "Lá chàm"
+      ],
+      "id": "learning-8",
+      "correct": 2,
+      "why": "Kiến thức cần nhớ: Vỏ điệp nghiền."
+    },
+    {
+      "title": "Bản khắc dùng để in tranh Đông Hồ thường được làm từ vật liệu nào?",
+      "answers": [
+        "Gỗ",
+        "Nhựa trong",
+        "Thủy tinh",
+        "Nhôm lá"
+      ],
+      "id": "learning-9",
+      "correct": 0,
+      "why": "Kiến thức cần nhớ: Gỗ."
+    },
+    {
+      "title": "Để in một bức tranh Đông Hồ có nhiều màu, nghệ nhân thường làm thế nào?",
+      "answers": [
+        "Dùng một bản in duy nhất cho mọi màu",
+        "In lần lượt các màu bằng những ván khắc tương ứng",
+        "Tô màu bằng bút sau khi in tất cả tranh",
+        "Chụp ảnh rồi in màu"
+      ],
+      "id": "learning-10",
+      "correct": 1,
+      "why": "Kiến thức cần nhớ: In lần lượt các màu bằng những ván khắc tương ứng."
+    },
+    {
+      "title": "Đề tài nào thường xuất hiện trong tranh Đông Hồ?",
+      "answers": [
+        "Sinh hoạt đời thường, con vật, chúc tụng và lịch sử",
+        "Chỉ phong cảnh nước ngoài",
+        "Chỉ máy móc công nghiệp",
+        "Chỉ chân dung người nổi tiếng hiện đại"
+      ],
+      "id": "learning-11",
+      "correct": 0,
+      "why": "Kiến thức cần nhớ: Sinh hoạt đời thường, con vật, chúc tụng và lịch sử."
+    },
+    {
+      "title": "Bức tranh 'Đàn gà' thường gợi lên ý nghĩa nào?",
+      "answers": [
+        "Sự cô đơn, chia lìa",
+        "Tình mẫu tử, sự sum vầy và mong ước no đủ",
+        "Cuộc sống nơi thành thị",
+        "Sự cạnh tranh trong học tập"
+      ],
+      "id": "learning-12",
+      "correct": 1,
+      "why": "Kiến thức cần nhớ: Tình mẫu tử, sự sum vầy và mong ước no đủ."
+    },
+    {
+      "title": "Tranh 'Lợn đàn' thường tượng trưng cho mong ước nào?",
+      "answers": [
+        "Sung túc, sinh sôi và no đủ",
+        "Chiến thắng trong thể thao",
+        "Đi du lịch xa",
+        "Phát triển công nghệ"
+      ],
+      "id": "learning-13",
+      "correct": 0,
+      "why": "Kiến thức cần nhớ: Sung túc, sinh sôi và no đủ."
+    },
+    {
+      "title": "Tranh 'Vinh quy bái tổ' gắn với nội dung nào?",
+      "answers": [
+        "Người đi đánh cá trở về",
+        "Người đỗ đạt trở về quê vinh danh tổ tiên",
+        "Cảnh buôn bán ở chợ",
+        "Lễ hội đua thuyền"
+      ],
+      "id": "learning-14",
+      "correct": 1,
+      "why": "Kiến thức cần nhớ: Người đỗ đạt trở về quê vinh danh tổ tiên."
+    },
+    {
+      "title": "Điểm nào sau đây là đặc trưng dễ nhận thấy của tranh Đông Hồ?",
+      "answers": [
+        "Đường nét khắc rõ, mảng màu tương đối phẳng",
+        "Chỉ dùng màu đen trắng",
+        "Luôn vẽ theo phối cảnh ảnh chụp",
+        "Chỉ thể hiện các nhân vật phương Tây"
+      ],
+      "id": "learning-15",
+      "correct": 0,
+      "why": "Kiến thức cần nhớ: Đường nét khắc rõ, mảng màu tương đối phẳng."
+    },
+    {
+      "title": "Tranh Đông Hồ có giá trị nào ngoài giá trị trang trí?",
+      "answers": [
+        "Chỉ có giá trị mua bán",
+        "Phản ánh văn hóa, đời sống và quan niệm dân gian",
+        "Chỉ dùng làm đồ chơi",
+        "Không có giá trị lịch sử"
+      ],
+      "id": "learning-16",
+      "correct": 1,
+      "why": "Kiến thức cần nhớ: Phản ánh văn hóa, đời sống và quan niệm dân gian."
+    },
+    {
+      "title": "Ai góp phần quan trọng trong việc gìn giữ nghề làm tranh Đông Hồ?",
+      "answers": [
+        "Chỉ khách du lịch",
+        "Các nghệ nhân, cộng đồng địa phương và thế hệ trẻ",
+        "Chỉ các nhà thiết kế nước ngoài",
+        "Chỉ người bán giấy"
+      ],
+      "id": "learning-17",
+      "correct": 1,
+      "why": "Kiến thức cần nhớ: Các nghệ nhân, cộng đồng địa phương và thế hệ trẻ."
+    },
+    {
+      "title": "Vì sao tranh dân gian Đông Hồ cần được bảo tồn?",
+      "answers": [
+        "Vì là di sản văn hóa truyền thống có giá trị",
+        "Vì tất cả tranh đều được in bằng máy hiện đại",
+        "Vì tranh không còn ý nghĩa với đời sống",
+        "Vì chỉ dùng để trang trí lớp học"
+      ],
+      "id": "learning-18",
+      "correct": 0,
+      "why": "Kiến thức cần nhớ: Vì là di sản văn hóa truyền thống có giá trị."
+    },
+    {
+      "title": "Học sinh có thể góp phần bảo tồn tranh Đông Hồ bằng cách nào?",
+      "answers": [
+        "Tìm hiểu, trải nghiệm sáng tạo và giới thiệu giá trị tranh",
+        "Chỉ xem tranh mà không tìm hiểu",
+        "Tự ý sửa đổi, làm mất ý nghĩa tranh gốc",
+        "Không chia sẻ kiến thức về di sản"
+      ],
+      "id": "learning-19",
+      "correct": 0,
+      "why": "Kiến thức cần nhớ: Tìm hiểu, trải nghiệm sáng tạo và giới thiệu giá trị tranh."
+    },
+    {
+      "title": "Bức tranh dân gian Đông Hồ Đàn gà thường gửi gắm thông điệp nào?",
+      "answers": [
+        "Tinh thần cạnh tranh trong cuộc sống.",
+        "Tình mẫu tử, sự sum vầy và mong ước no đủ.",
+        "Khát vọng chinh phục thiên nhiên.",
+        "Cuộc sống lao động nơi thành thị."
+      ],
+      "id": "learning-20",
+      "correct": 1,
+      "why": "Kiến thức cần nhớ: Tình mẫu tử, sự sum vầy và mong ước no đủ."
+    },
+    {
+      "title": "Hình ảnh gà mẹ dang rộng đôi chân, đàn gà con quây quần xung quanh trong tranh Đàn gà gợi lên điều gì?",
+      "answers": [
+        "Sự ganh đua giữa các thành viên.",
+        "Sự xa cách giữa mẹ và con.",
+        "Sự chở che, gắn bó và yêu thương trong gia đình.",
+        "Sự độc lập của mỗi cá thể."
+      ],
+      "id": "learning-21",
+      "correct": 2,
+      "why": "Kiến thức cần nhớ: Sự chở che, gắn bó và yêu thương trong gia đình."
+    },
+    {
+      "title": "Bức tranh Hiếu học đề cao giá trị nào?",
+      "answers": [
+        "Sự giàu có về vật chất.",
+        "Tinh thần ham học hỏi, coi trọng việc học.",
+        "Khả năng chiến thắng trong các cuộc thi.",
+        "Mong muốn nổi tiếng."
+      ],
+      "id": "learning-22",
+      "correct": 1,
+      "why": "Kiến thức cần nhớ: Tinh thần ham học hỏi, coi trọng việc học."
+    },
+    {
+      "title": "Thông điệp phù hợp nhất khi tìm hiểu tranh Hiếu học là gì?",
+      "answers": [
+        "Chỉ người có điều kiện kinh tế mới cần học tập.",
+        "Học tập chỉ để đạt điểm cao.",
+        "Cần chăm chỉ học tập, rèn luyện bản thân và trân trọng tri thức.",
+        "Không cần học tập nếu có năng khiếu."
+      ],
+      "id": "learning-23",
+      "correct": 2,
+      "why": "Kiến thức cần nhớ: Cần chăm chỉ học tập, rèn luyện bản thân và trân trọng tri thức."
+    },
+    {
+      "title": "Hình tượng cóc mặc áo mũ, ngồi dạy học trò trong tranh Thầy đồ cóc tạo nên sắc thái nghệ thuật nào?",
+      "answers": [
+        "Hài hước, hóm hỉnh và mang tính châm biếm.",
+        "Hoàn toàn nghiêm túc, không có yếu tố hài hước.",
+        "Kinh dị và huyền bí.",
+        "Lãng mạn, trữ tình."
+      ],
+      "id": "learning-24",
+      "correct": 0,
+      "why": "Kiến thức cần nhớ: Hài hước, hóm hỉnh và mang tính châm biếm."
+    },
+    {
+      "title": "Việc sử dụng hình tượng cóc làm thầy đồ trong tranh dân gian có thể giúp người xem cảm nhận điều gì?",
+      "answers": [
+        "Chỉ có con người mới có thể học tập.",
+        "Tranh dân gian chỉ dùng để kể chuyện loài vật.",
+        "Nghệ nhân không quan tâm đến đời sống xã hội.",
+        "Cách quan sát, phản ánh xã hội bằng trí tưởng tượng và tiếng cười dân gian."
+      ],
+      "id": "learning-25",
+      "correct": 3,
+      "why": "Kiến thức cần nhớ: Cách quan sát, phản ánh xã hội bằng trí tưởng tượng và tiếng cười dân gian."
+    },
+    {
+      "title": "Khi tìm hiểu bức tranh Thư hùng Gia đình gà, điều gì cần được chú ý nhất khi phân tích nội dung tranh?",
+      "answers": [
+        "Chỉ quan tâm đến số lượng màu sắc.",
+        "Quan sát tư thế, mối quan hệ giữa các nhân vật và ý nghĩa biểu tượng của gà trống, gà mái.",
+        "Chỉ xác định kích thước của bức tranh.",
+        "Chỉ tìm hiểu giá bán của tranh."
+      ],
+      "id": "learning-26",
+      "correct": 1,
+      "why": "Kiến thức cần nhớ: Quan sát tư thế, mối quan hệ giữa các nhân vật và ý nghĩa biểu tượng của gà trống, gà mái."
+    },
+    {
+      "title": "Điểm chung có thể khai thác khi tìm hiểu các bức tranh Đàn gà, Vinh hoa phú quý, Hiếu học và Thầy đồ cóc là gì?",
+      "answers": [
+        "Tất cả đều chỉ miêu tả cảnh thiên nhiên.",
+        "Tất cả đều được sáng tác để quảng cáo hàng hóa.",
+        "Tranh vừa có giá trị nghệ thuật, vừa phản ánh quan niệm, ước vọng hoặc cách nhìn cuộc sống của người Việt.",
+        "Tất cả đều chỉ sử dụng hình tượng con người."
+      ],
+      "id": "learning-27",
+      "correct": 2,
+      "why": "Kiến thức cần nhớ: Tranh vừa có giá trị nghệ thuật, vừa phản ánh quan niệm, ước vọng hoặc cách nhìn cuộc sống của người Việt."
+    },
+    {
+      "title": "Loại giấy truyền thống thường được sử dụng để in tranh Đông Hồ là gì?",
+      "answers": [
+        "Giấy bạc.",
+        "Giấy bóng kính.",
+        "Giấy nhựa tổng hợp.",
+        "Giấy dó được phủ một lớp điệp."
+      ],
+      "id": "learning-28",
+      "correct": 3,
+      "why": "Kiến thức cần nhớ: Giấy dó được phủ một lớp điệp."
+    },
+    {
+      "title": "Lớp điệp trên giấy in tranh Đông Hồ thường được tạo từ nguyên liệu nào?",
+      "answers": [
+        "Vỏ sò, vỏ điệp nghiền thành bột.",
+        "Bột than đá.",
+        "Mùn cưa.",
+        "Bột sắt."
+      ],
+      "id": "learning-29",
+      "correct": 0,
+      "why": "Kiến thức cần nhớ: Vỏ sò, vỏ điệp nghiền thành bột."
+    },
+    {
+      "title": "Một đặc điểm nổi bật của màu sắc trong tranh Đông Hồ truyền thống là gì?",
+      "answers": [
+        "Chỉ sử dụng màu đen và trắng.",
+        "Chủ yếu dùng màu in phun kỹ thuật số.",
+        "Thường sử dụng màu có nguồn gốc tự nhiên.",
+        "Chỉ dùng màu kim loại."
+      ],
+      "id": "learning-30",
+      "correct": 2,
+      "why": "Kiến thức cần nhớ: Thường sử dụng màu có nguồn gốc tự nhiên."
+    },
+    {
+      "title": "Nguyên liệu nào thường được dùng để tạo màu đen trong tranh Đông Hồ truyền thống?",
+      "answers": [
+        "Hoa hòe.",
+        "Than lá tre.",
+        "Vỏ điệp.",
+        "Đất son đỏ."
+      ],
+      "id": "learning-31",
+      "correct": 1,
+      "why": "Kiến thức cần nhớ: Than lá tre."
+    },
+    {
+      "title": "Ván khắc gỗ trong nghề làm tranh Đông Hồ có tác dụng gì?",
+      "answers": [
+        "Dùng để phơi giấy.",
+        "Dùng để nghiền nguyên liệu tạo màu.",
+        "Dùng để làm khô tranh sau khi in.",
+        "Tạo hình nét hoặc mảng màu để in lên giấy."
+      ],
+      "id": "learning-32",
+      "correct": 3,
+      "why": "Kiến thức cần nhớ: Tạo hình nét hoặc mảng màu để in lên giấy."
+    },
+    {
+      "title": "Khi in một bức tranh Đông Hồ có nhiều màu, nghệ nhân thường làm như thế nào?",
+      "answers": [
+        "Sử dụng các ván khắc tương ứng để in lần lượt từng màu.",
+        "Chỉ dùng một ván khắc cho tất cả các màu mà không thay đổi cách in.",
+        "Vẽ toàn bộ tranh bằng bút sau khi in.",
+        "In tranh bằng máy in laser màu."
+      ],
+      "id": "learning-33",
+      "correct": 0,
+      "why": "Kiến thức cần nhớ: Sử dụng các ván khắc tương ứng để in lần lượt từng màu."
+    },
+    {
+      "title": "Dụng cụ nào thường được dùng để đưa màu từ ván khắc lên giấy trong quá trình in tranh truyền thống?",
+      "answers": [
+        "Búa sắt.",
+        "Kéo cắt giấy.",
+        "Bút lông dùng để vẽ trực tiếp toàn bộ tranh.",
+        "Thét hoặc dụng cụ quét màu và thao tác miết, ép giấy khi in."
+      ],
+      "id": "learning-34",
+      "correct": 3,
+      "why": "Kiến thức cần nhớ: Thét hoặc dụng cụ quét màu và thao tác miết, ép giấy khi in."
+    },
+    {
+      "title": "Vì sao nghệ nhân cần căn chỉnh cẩn thận khi in nhiều màu lên cùng một bức tranh?",
+      "answers": [
+        "Để giấy có thể đổi kích thước.",
+        "Để các mảng màu nằm đúng vị trí, tạo hình ảnh hoàn chỉnh.",
+        "Để không cần sử dụng ván khắc.",
+        "Để làm mất các đường nét của tranh."
+      ],
+      "id": "learning-35",
+      "correct": 1,
+      "why": "Kiến thức cần nhớ: Để các mảng màu nằm đúng vị trí, tạo hình ảnh hoàn chỉnh."
+    },
+    {
+      "title": "Việc sử dụng nguyên liệu tự nhiên và kỹ thuật in ván khắc thể hiện điều gì?",
+      "answers": [
+        "Nghề làm tranh không đòi hỏi kỹ năng.",
+        "Tranh Đông Hồ chỉ có thể sản xuất bằng máy.",
+        "Tri thức dân gian, kinh nghiệm và kỹ thuật thủ công được tích lũy qua nhiều thế hệ.",
+        "Nguyên liệu tự nhiên luôn có chất lượng giống hệt nhau."
+      ],
+      "id": "learning-36",
+      "correct": 2,
+      "why": "Kiến thức cần nhớ: Tri thức dân gian, kinh nghiệm và kỹ thuật thủ công được tích lũy qua nhiều thế hệ."
+    },
+    {
+      "title": "Học sinh có thể góp phần gìn giữ nghề làm tranh Đông Hồ bằng cách nào?",
+      "answers": [
+        "Tìm hiểu ý nghĩa tranh, trải nghiệm quy trình làm tranh và giới thiệu di sản tới mọi người.",
+        "Chỉ quan tâm đến việc mua bán tranh.",
+        "Thay thế hoàn toàn kỹ thuật truyền thống bằng hình ảnh có sẵn.",
+        "Chỉ học thuộc tên tranh mà không cần tìm hiểu."
+      ],
+      "id": "learning-37",
+      "correct": 0,
+      "why": "Kiến thức cần nhớ: Tìm hiểu ý nghĩa tranh, trải nghiệm quy trình làm tranh và giới thiệu di sản tới mọi người."
+    }
+  ],
+  "games": {
+    "crossword": [
+      {
+        "clue": "Tên làng nghề nổi tiếng với dòng tranh dân gian này?",
+        "answer": "ĐÔNG HỒ"
+      },
+      {
+        "clue": "Loại giấy được phủ bột điệp để in tranh?",
+        "answer": "GIẤY ĐIỆP"
+      },
+      {
+        "clue": "Dụng cụ gỗ dùng để tạo hình in trên tranh?",
+        "answer": "VÁN KHẮC"
+      },
+      {
+        "clue": "Nguyên liệu tự nhiên tạo màu đen?",
+        "answer": "THAN LÁ TRE"
+      },
+      {
+        "clue": "Tranh có đàn con quây quần quanh gà mẹ?",
+        "answer": "ĐÀN GÀ"
+      },
+      {
+        "clue": "Tranh gửi gắm mong ước con cháu sung túc, vinh hiển?",
+        "answer": "VINH HOA PHÚ QUÝ"
+      },
+      {
+        "clue": "Tranh đề cao tinh thần ham học?",
+        "answer": "HIẾU HỌC"
+      },
+      {
+        "clue": "Tranh có thầy và trò là loài vật?",
+        "answer": "THẦY ĐỒ CÓC"
+      },
+      {
+        "clue": "Phương pháp ép giấy lên ván đã có màu?",
+        "answer": "IN KHẮC GỖ"
+      },
+      {
+        "clue": "Người gìn giữ và truyền bí quyết làm tranh?",
+        "answer": "NGHỆ NHÂN"
+      }
+    ],
+    "matching": [
+      {
+        "description": "Giấy dó phủ điệp, có ánh lấp lánh",
+        "term": "Giấy điệp"
+      },
+      {
+        "description": "Tạo hình để in tranh",
+        "term": "Ván khắc gỗ"
+      },
+      {
+        "description": "Nguyên liệu tạo màu đen truyền thống",
+        "term": "Than lá tre"
+      },
+      {
+        "description": "Có thể lấy từ thực vật, khoáng vật hoặc các nguồn tự nhiên",
+        "term": "Màu tự nhiên"
+      },
+      {
+        "description": "Người thực hành và truyền nghề làm tranh",
+        "term": "Nghệ nhân"
+      },
+      {
+        "description": "Được nghiền từ vỏ điệp",
+        "term": "Bột điệp"
+      }
+    ],
+    "guess": [
+      {
+        "name": "Đàn gà",
+        "image": "heritage/images/image31.jpeg"
+      },
+      {
+        "name": "Hiếu học",
+        "image": "heritage/images/image32.webp"
+      },
+      {
+        "name": "Thư hùng – Gia đình gà",
+        "image": "heritage/images/image33.png"
+      },
+      {
+        "name": "Vinh quy bái tổ",
+        "image": "heritage/images/image23.jpg"
+      },
+      {
+        "name": "Thầy đồ cóc",
+        "image": "heritage/images/image34.jpg"
+      }
+    ]
+  }
+}

@@ -243,6 +243,16 @@ export function createVideoServer({ apiKey = '', provider = 'pollinations', alib
       if (req.headers['sec-fetch-site'] === 'cross-site') throw new ApiError(403, 'Chỉ trang ứng dụng trên máy này được phép gọi API.');
       const url = new URL(req.url, `http://${host}`);
 
+      if (req.method === 'GET' && /^\/heritage\/(?:images|audio)\/[a-zA-Z0-9_.-]+\.(?:png|jpe?g|webp|mp3)$/.test(url.pathname)) {
+        let data;
+        try {data = await readFile(path.join(root, url.pathname.slice(1)));}
+        catch {json(res, 404, {error: 'Không tìm thấy học liệu.'}); return;}
+        const ext = path.extname(url.pathname).toLowerCase();
+        const types = {'.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.webp':'image/webp','.mp3':'audio/mpeg'};
+        res.writeHead(200, {'Content-Type': types[ext], 'Content-Length': data.length, 'Cache-Control': 'no-cache'});
+        res.end(data); return;
+      }
+
       if (req.method === 'GET' && (url.pathname === '/' || url.pathname === '/Dongho.html')) {
         const html = await readFile(path.join(root, 'Dongho.html'));
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8', 'Content-Length': html.length, 'Cache-Control': 'no-cache', 'X-Frame-Options': 'DENY' });

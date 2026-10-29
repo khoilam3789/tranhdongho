@@ -392,7 +392,7 @@
     for (const id of ['storyHeading', 'storyText']) $('#' + id).setCustomValidity('');
   }
 
-  window.donghoAI = {updateStory, refreshControls: updateControls};
+  window.donghoAI = {updateStory, refreshControls: updateControls, activate:()=>setMode('ai')};
   $('#preview2DTab').addEventListener('click', () => setMode('2d'));
   $('#previewAITab').addEventListener('click', () => setMode('ai'));
   $('.preview-mode-switch').addEventListener('keydown', event => {
