@@ -10,6 +10,7 @@ catalog.paintings=catalog.paintings.filter(item=>!['mouse','fortune','hen'].incl
 const embedded={};
 const objectMasks=JSON.parse(await read('heritage/object-masks.json'));
 const maskRuntime=await read('web/heritage-masks.js');
+for(const kit of Object.values(objectMasks)){if(kit.backgroundSource)embedded[kit.backgroundSource]='data:image/png;base64,'+(await readFile(path.join(root,kit.backgroundSource))).toString('base64');}
 for(const [id,item]of Object.entries(content.paintings)){
   const painting=catalog.paintings.find(p=>p.id===id);if(!painting)throw new Error('Unknown painting '+id);
   Object.assign(painting,{name:item.name,img:item.image,summary:item.summary,symbols:item.symbols,source:'Ảnh và nội dung theo bộ học liệu do nhóm cung cấp.',note:'Đọc hình tượng theo bản tranh tham chiếu; một số chi tiết có thể khác giữa các dị bản.'});
@@ -30,7 +31,7 @@ for(let row=0;row<2;row++)for(let col=0;col<3;col++){
 
 for(const piece of catalog.pieces)if(['teacher','roosterfamily'].includes(piece.painting))piece.legacyOnly=true;
 for(const [id,kit]of Object.entries(objectMasks)){
- catalog.studios.find(s=>s.id===id).background='generated/'+id+'-background.svg';
+ const studio=catalog.studios.find(s=>s.id===id);studio.background='generated/'+id+'-background.svg';studio.structuralBackground=!!kit.backgroundSource;
  kit.objects.forEach((object,index)=>{
   const xs=[object.points,...(object.extras||[])].flat().map(p=>p[0]),ys=[object.points,...(object.extras||[])].flat().map(p=>p[1]),x=Math.max(0,Math.min(...xs)-2),y=Math.max(0,Math.min(...ys)-2),w=Math.min(kit.width,Math.max(...xs)+2)-x,h=Math.min(kit.height,Math.max(...ys)+2)-y,fitX=Math.min(1,kit.width/kit.height/1.5),fitY=Math.min(1,1.5/(kit.width/kit.height));
   catalog.pieces.push({id:id+'_object_'+index,name:object.name,img:'generated/'+id+'-object-'+index+'.svg',width:w/kit.width*fitX*100,painting:id,desc:'Phần hình tượng nhìn thấy trong tranh gốc, tách bằng mặt nạ SVG, không vẽ bù phần bị che.',target:{x:50+((x+w/2)/kit.width-.5)*fitX*100,y:50+((y+h/2)/kit.height-.5)*fitY*100}});

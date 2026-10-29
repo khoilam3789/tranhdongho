@@ -14,6 +14,12 @@
    const encode=text=>'data:image/svg+xml;charset=utf-8,'+encodeURIComponent(text);
    kit.objects.forEach((object,index)=>{const mask=polygon(object,'white')+kit.objects.slice(index+1).map(other=>polygon(other,'black')).join('');assets['generated/'+id+'-object-'+index+'.svg']=encode(svg(geometry(kit,object),mask));});
    assets['generated/'+id+'-background.svg']=encode(svg({x:0,y:0,w:kit.width,h:kit.height},'<rect width="'+kit.width+'" height="'+kit.height+'" fill="white"/>'+kit.objects.map(object=>polygon(object,'black')).join('')));
+   if(kit.backgroundSource){
+    const b=kit.backgroundImage;
+    if(!assets[kit.backgroundSource])throw new Error('Missing supplied background');
+    assets['generated/'+id+'-background.svg']=encode('<svg xmlns="http://www.w3.org/2000/svg" width="'+kit.width+'" height="'+kit.height+'" viewBox="0 0 '+kit.width+' '+kit.height+'"><image x="'+b.x+'" y="'+b.y+'" width="'+b.width+'" height="'+b.height+'" preserveAspectRatio="none" href="'+assets[kit.backgroundSource]+'"/></svg>');
+   }
+
   }
  }
  root.DongHoObjectMasks={geometry,populate};

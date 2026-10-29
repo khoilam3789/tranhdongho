@@ -1224,7 +1224,14 @@
           ]
         ]
       }
-    ]
+    ],
+    "backgroundSource": "heritage/images/teacher-background-provided.png",
+    "backgroundImage": {
+      "x": -9.201680672268907,
+      "y": -30.111111111111114,
+      "width": 737.3848739495797,
+      "height": 559.8933333333333
+    }
   },
   "roosterfamily": {
     "source": "heritage/images/image30.png",

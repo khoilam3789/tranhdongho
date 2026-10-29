@@ -13,7 +13,7 @@ test('clean learning text and labeled illustration intro',async()=>{
 });
 test('semantic masks preserve source pixels and align with their original background',async()=>{
  const sandbox={};vm.runInNewContext(await readFile(new URL('web/heritage-masks.js',root),'utf8'),sandbox);
- const assets={};for(const kit of Object.values(masks))assets[kit.source]='data:image/png;base64,'+(await readFile(new URL(kit.source,root))).toString('base64');
+ const assets={};for(const kit of Object.values(masks))for(const source of [kit.source,kit.backgroundSource].filter(Boolean))assets[source]='data:image/png;base64,'+(await readFile(new URL(source,root))).toString('base64');
  sandbox.DongHoObjectMasks.populate(assets,masks);
  assert.equal(masks.teacher.objects.length,12);assert.equal(masks.roosterfamily.objects.length,10);
  for(const [id,kit]of Object.entries(masks)){
@@ -24,7 +24,7 @@ test('semantic masks preserve source pixels and align with their original backgr
    const svg=decodeURIComponent(assets['generated/'+id+'-object-'+index+'.svg'].split(',').slice(1).join(','));
    assert.ok(svg.includes(assets[kit.source]));assert.match(svg,/<mask/);assert.match(svg,/<polygon/);
   });
-  assert.ok(assets['generated/'+id+'-background.svg']);
+  assert.ok(assets['generated/'+id+'-background.svg']);if(kit.backgroundSource)assert.ok(decodeURIComponent(assets['generated/'+id+'-background.svg']).includes(assets[kit.backgroundSource]));
  }
 });
 test('new shelves retain legacy IDs but show semantic objects',async()=>{

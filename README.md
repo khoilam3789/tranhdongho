@@ -160,3 +160,8 @@ Trang chủ dùng nền bản đồ chibi riêng ở heritage/images/dongho-vill
 heritage/object-masks.json chứa đa giác của 12 hình tượng Thầy đồ cóc và 10 hình tượng Thư hùng. web/heritage-masks.js dùng điểm ảnh gốc cho mảnh và nền, không vẽ bù phần bị che. Mảnh cũ được giữ để mở bản thảo đã lưu, không xuất hiện trong bộ mảnh mới.
 
 Ô chữ có 80 ô cho 10 hàng, nhận nhập có dấu hoặc dán nguyên đáp án, hỗ trợ phím mũi tên và Backspace. Video giới thiệu là bản minh họa 76 giây dựng tại máy từ học liệu và giọng đọc có sẵn, có thể thay bằng video gốc sau. Hai bản đọc có câu chỉ dẫn đã được tạo lại sau biên tập.
+
+
+### Nền Thầy đồ cóc do nhóm cung cấp
+
+Nền sạch có cây tùng và án thư được trích nguyên độ phân giải 1448 x 1086 từ PDF Nen_A3_in_100phantram.pdf trong bộ Bo_coc_A3_ban_nhe. Tệp đầy đủ: heritage/images/teacher-background-provided.png. SVG căn lại lề giấy để khớp hệ tọa độ của các hình tượng hiện có; không cắt cây hoặc bàn. Nền được giữ cả khi đổi màu viền và xuất PNG. Xưởng có nút tải riêng ảnh nền đầy đủ.

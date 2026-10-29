@@ -45,6 +45,10 @@
     if(!overlay){overlay=document.createElement('img');overlay.id='studioReferenceOverlay';overlay.alt='Tranh chuẩn để tự đối chiếu vị trí';$('#workStage').appendChild(overlay);}
     if(painting)overlay.src=app.asset(painting.img);
     overlay.hidden=!referenceVisible||!painting;
+    let download=$('#downloadTeacherBackground');
+    if(!download){download=document.createElement('a');download.id='downloadTeacherBackground';download.className='button button-neutral';download.href='heritage/images/teacher-background-provided.png';download.download='nen-thay-do-coc-co-cay-va-ban.png';download.textContent='Tải nền có cây và bàn';$('.composition-check').appendChild(download);}
+    download.hidden=kit?.id!=='teacher';
+
     $('#checkCompositionBtn').setAttribute('aria-pressed',String(referenceVisible));
     $('#checkCompositionBtn').textContent=referenceVisible?'Ẩn hình chuẩn':'Kiểm tra · Hiện hình chuẩn';
     $('#compositionCheckHint').textContent=referenceVisible?'Hình chuẩn đang hiện mờ. Em vẫn kéo hoặc dùng phím mũi tên để tự căn lại từng mảnh.':'Bật hình chuẩn để đối chiếu; ứng dụng không tự di chuyển các mảnh hoặc chấm điểm bố cục.';
