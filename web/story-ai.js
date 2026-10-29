@@ -296,9 +296,18 @@
     }
   }
 
+  function isPaintingSource(source) {
+    if (typeof source !== 'string') return false;
+    if (source.startsWith('data:image/')) return true;
+    try {
+      const url = new URL(source, window.location.href);
+      return ['https:', 'http:'].includes(url.protocol) && url.origin === window.location.origin && url.pathname.startsWith('/media/');
+    } catch { return false; }
+  }
+
   async function referenceFrame(aspectRatio) {
     const source = $('.painting-card.active img')?.getAttribute('src');
-    if (!source?.startsWith('data:image/')) throw new Error('Chưa lấy được tranh gốc. Chọn một tranh ở phần Khám phá di sản trước khi tạo video.');
+    if (!isPaintingSource(source)) throw new Error('Chưa lấy được tranh gốc. Chọn một tranh ở phần Khám phá di sản trước khi tạo video.');
     const image = new Image();
     image.src = source;
     await image.decode();
