@@ -6,9 +6,10 @@ import vm from 'node:vm';
 const root=new URL('../',import.meta.url);
 const data=JSON.parse(await readFile(new URL('heritage/content.json',root),'utf8'));
 const masks=JSON.parse(await readFile(new URL('heritage/object-masks.json',root),'utf8'));
-test('clean learning text and labeled illustration intro',async()=>{
+test('clean learning text and group-provided introduction',async()=>{
  for(const item of [...data.lessons,...Object.values(data.paintings)])for(const text of item.paragraphs)assert.doesNotMatch(text,/^(Đoạn 5 màu sắc|Phần em có biết thì có thêm|Ý nghĩa bức tranh:|Ý nghĩa từng đối tượng:)/);
- assert.equal(data.introVideo.kind,'illustration');
+ assert.equal(data.introVideo.kind,'provided');
+ const poster=await readFile(new URL(data.introVideo.poster,root));assert.equal(poster.subarray(0,3).toString('hex'),'ffd8ff');
  const video=await readFile(new URL(data.introVideo.src,root));assert.equal(video.subarray(4,8).toString(),'ftyp');assert.ok(video.length>100000);
 });
 test('semantic masks preserve source pixels and align with their original background',async()=>{

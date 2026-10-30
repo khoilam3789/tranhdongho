@@ -23,7 +23,7 @@
   const projectMenu=document.createElement('details');projectMenu.className='project-menu';projectMenu.innerHTML='<summary>Dự án của em</summary>';projectMenu.appendChild($('.save-box'));$('.sidebar').appendChild(projectMenu);
   document.querySelectorAll('[data-heritage-go]').forEach(button=>button.addEventListener('click',()=>{
     pauseMedia();const target=button.dataset.heritageGo;
-    if(target==='intro'){if(!introURL&&data.introVideo){const video=$('#heritageIntroVideo');video.src=data.introVideo.src;video.hidden=false;$('#introVideoStatus').textContent=data.introVideo.caption;}$('#heritageIntroDialog').showModal();return;}
+    if(target==='intro'){if(!introURL&&data.introVideo){const video=$('#heritageIntroVideo');video.poster=data.introVideo.poster||'';video.src=data.introVideo.src;video.hidden=false;$('#introVideoStatus').textContent=data.introVideo.caption;}$('#heritageIntroDialog').showModal();return;}
     if(['history','materials','colors'].includes(target)){app.navigate('home');$(`[data-lesson="${target}"]`).click();$(`[data-lesson-panel="${target}"]`).scrollIntoView({behavior:'smooth',block:'start'});}
     else app.navigate(target);
   }));
@@ -33,7 +33,7 @@
   $('#heritageIntroFile').addEventListener('change',event=>{
     const file=event.target.files?.[0];if(!file)return;
     if(!file.type.startsWith('video/')||file.size>200*1024*1024){$('#introVideoStatus').textContent='Chọn tệp video không quá 200 MB.';return;}
-    if(introURL)URL.revokeObjectURL(introURL);introURL=URL.createObjectURL(file);const video=$('#heritageIntroVideo');video.src=introURL;video.hidden=false;
+    if(introURL)URL.revokeObjectURL(introURL);introURL=URL.createObjectURL(file);const video=$('#heritageIntroVideo');video.removeAttribute('poster');video.src=introURL;video.hidden=false;
     $('#introVideoStatus').textContent=`Đã chọn ${file.name}. Video chỉ mở trên máy này, chưa được tải lên website.`;
   });
   $('#heritageIntroDialog').addEventListener('close',()=>$('#heritageIntroVideo').pause());

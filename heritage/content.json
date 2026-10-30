@@ -858,8 +858,9 @@
     ]
   },
   "introVideo": {
-    "src": "heritage/video/gioi-thieu-minh-hoa-v3.mp4",
-    "kind": "illustration",
-    "caption": "Video giới thiệu minh họa từ ảnh học liệu và giọng đọc có sẵn. Đây là bản minh họa, có thể thay bằng video gốc của nhóm."
+    "src": "heritage/video/gioi-thieu-dong-ho-nhom-v1.mp4",
+    "poster": "heritage/images/gioi-thieu-dong-ho-bia-v1.jpg",
+    "kind": "provided",
+    "caption": "Video giới thiệu tranh dân gian Đông Hồ do nhóm cung cấp. Có âm thanh."
   }
 }
