@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import http from 'node:http';
 import { once } from 'node:events';
-import { createVideoServer, normalizeModels, buildVideoPrompt } from '../server.mjs';
+import { createVideoServer, normalizeModels, buildVideoPrompt, validateStory } from '../server.mjs';
 
 const KEY = 'sk_test_secret_never_expose';
 const CATALOG = [{ name: 'test/video', title: 'Test Video', allowed_durations: [4, 6, 8], paid_only: false, video_capabilities: { aspect_ratios: ['16:9', '9:16'] } }];
@@ -95,7 +95,7 @@ test('uses provider default duration when catalog omits supported values', async
 
 test('rejects empty, oversized or unsupported story fields without generating', async t => {
   const { base, calls } = await fixture(t);
-  for (const patch of [{ title: '   ' }, { narration: '' }, { narration: 'a'.repeat(1601) }, { title: 'a'.repeat(91) }, { message: '' }, { model: 'fake' }, { duration: 30 }, { aspectRatio: '4:3' }]) {
+  for (const patch of [{ title: '   ' }, { narration: '' }, { narration: 'a'.repeat(1601) }, { title: 'a'.repeat(91) }, { message: 'a'.repeat(201) }, { model: 'fake' }, { duration: 30 }, { aspectRatio: '4:3' }]) {
     const response = await generate(base, { ...STORY, ...patch });
     assert.equal(response.status, 400, JSON.stringify(patch));
     assert.equal((await response.text()).includes(KEY), false);
@@ -200,4 +200,12 @@ test('client cancellation aborts upstream and simultaneous jobs are rejected', a
 test('prompt does not lose later narrative sentences', () => {
   const narrative = 'Câu một. Câu hai. Câu ba. Câu bốn. Câu năm. Câu sáu.';
   assert.ok(buildVideoPrompt({ ...STORY, narration: narrative }).includes(narrative));
+});
+
+
+test('optional custom message stays blank or keeps the student text, with a 200 character limit',()=>{
+ const models=[{id:STORY.model,durations:[6],aspectRatios:['16:9']}];
+ for(const message of ['','   ','Yêu thiên nhiên, giữ gìn dòng sông quê em'])assert.equal(validateStory({...STORY,message},models).message,message.trim());
+ assert.throws(()=>validateStory({...STORY,message:'a'.repeat(201)},models));
+ assert.throws(()=>validateStory({...STORY,message:{}},models));
 });

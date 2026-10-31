@@ -23,7 +23,7 @@
   function readStory() {
     return {
       title: $('#storyHeading').value.trim(),
-      message: $('#themeSelect').selectedOptions[0]?.textContent.trim() || '',
+      message: $('#themeSelect').value.trim(),
       narration: $('#storyText').value.trim(),
       painting: $('.painting-card.active strong')?.textContent.trim() || 'Tranh dân gian Đông Hồ'
     };

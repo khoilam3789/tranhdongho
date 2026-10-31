@@ -132,7 +132,7 @@ function textField(body, key, label, limit, required = true) {
 
 export function validateStory(body, models) {
   const title = textField(body, 'title', 'Tiêu đề', 90);
-  const message = textField(body, 'message', 'Thông điệp', 200);
+  const message = textField(body, 'message', 'Thông điệp', 200, false);
   const narration = textField(body, 'narration', 'Lời kể', 1600);
   const painting = body.painting === undefined ? 'Tranh dân gian Đông Hồ' : textField(body, 'painting', 'Tên tranh', 200, false);
   const model = models.find(x => x.id === body.model);

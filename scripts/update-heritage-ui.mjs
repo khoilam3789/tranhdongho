@@ -83,6 +83,9 @@ html=html.replace(/<p class="demo-story-note">[\s\S]*?<\/p>/,'<p class="demo-sto
 html=html.replace('2D trên máy · AI qua API','Video AI · Giữ nguyên tranh gốc').replace('Biến câu chuyện của em thành hoạt ảnh hoặc một thước phim AI.','Tạo video AI chuyển động nhẹ từ tranh gốc và lời kể của em.');
 html=html.replace('Phần bài học luôn có sẵn khi không có mạng.','Bài học có nội dung chữ, hình ảnh và bản đọc tiếng Việt.').replace('Ảnh tư liệu từ tài liệu của nhóm nghiên cứu · Bấm số trên hình để đọc ý nghĩa','Ảnh tư liệu từ học liệu · Chọn hình tượng trong phần chú giải để đọc thêm');
 if(!html.includes('id="heritageIntroDialog"'))html=html.replace('</body>','<dialog id="heritageIntroDialog" class="intro-video-dialog"><div class="intro-dialog-heading"><h2>Video giới thiệu tranh Đông Hồ</h2><button id="closeHeritageIntro" type="button" class="button button-neutral">Đóng</button></div><p id="introVideoStatus">Tài liệu chưa kèm tệp video giới thiệu. Anh/chị có thể chọn video từ máy để xem thử tại đây.</p><label>Chọn video giới thiệu<input id="heritageIntroFile" type="file" accept="video/*"></label><video id="heritageIntroVideo" controls playsinline preload="metadata" hidden></video></dialog></body>');
+html=html.replace(/<select id="themeSelect"[^>]*>[\s\S]*?<\/select>/,'<input id="themeSelect" class="field" type="text" maxlength="200" autocomplete="off" placeholder="Em tự viết thông điệp của câu chuyện…" aria-describedby="storyMessageHint"><small id="storyMessageHint">Có thể để trống và bổ sung sau (tối đa 200 ký tự).</small>');
+const aiScript=script('story-ai-script',await read('web/story-ai.js'));
+html=html.replace(/<script id="story-ai-script">[\s\S]*?<\/script>/,()=>aiScript);
 const uiBundle=script('heritage-ui',await read('web/heritage-ui.js'))+'</body>';
 html=html.replace('</body>',()=>uiBundle);
 await writeFile(path.join(root,'Dongho.html'),html);

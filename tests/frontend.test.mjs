@@ -126,7 +126,7 @@ function fixture({ configured = true, models = MODELS, config = {}, generate = a
   get('#storyText').value = STORY.narration;
   get('.painting-card.active strong').textContent = STORY.painting;
   get('.painting-card.active img').setAttribute('src', 'data:image/jpeg;base64,' + Buffer.alloc(256, 1).toString('base64'));
-  get('#themeSelect').replaceChildren({ value: 'family', textContent: STORY.message });
+  get('#themeSelect').value = STORY.message;
   get('#preview2DTab').setAttribute('aria-selected', 'true');
   get('#previewAITab').setAttribute('aria-selected', 'false');
   get('#playPreviewBtn').setAttribute('aria-pressed', 'false');
@@ -659,4 +659,12 @@ test('BytePlus never falls back to text-only generation if the artwork image is 
  await ui.get('#generateAIVideoBtn').click();
  assert.equal(ui.generationCalls().length,0);
  assert.match(ui.get('#aiStatus').textContent,/Chưa lấy được tranh gốc/);
+});
+
+
+test('video uses a freely typed message and also accepts an empty message',async()=>{
+ for(const message of ['Yêu thiên nhiên, giữ gìn dòng sông quê em','']){
+  const ui=fixture({generate:async init=>{assert.equal(JSON.parse(init.body).message,message);return videoResponse();}});
+  ui.get('#themeSelect').value=message;await ui.connect();await ui.get('#generateAIVideoBtn').click();assert.equal(ui.generationCalls().length,1);
+ }
 });
